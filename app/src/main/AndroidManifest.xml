@@ -10,6 +10,21 @@
             android:supportsRtl="true"
             android:theme="@style/Theme.AIO_Android">
         <activity
+                android:name=".Android_Example_List"
+                android:exported="true"/>
+        <activity
+                android:name="AndroidBasic.DataBinding.DataBinding_Example"
+                android:exported="true"/>
+        <activity
+                android:name="AndroidBasic.AndroidDesign.MVVM_easy_example"
+                android:exported="true"/>
+        <activity
+                android:name="AndroidBasic.AndroidDesign.MVP_easy_example"
+                android:exported="true"/>
+        <activity
+                android:name="AndroidBasic.AndroidDesign.MVC_easy_example"
+                android:exported="true"/>
+        <activity
                 android:name=".MainActivity"
                 android:exported="true">
             <intent-filter>
@@ -18,6 +33,10 @@
                 <category android:name="android.intent.category.LAUNCHER"/>
             </intent-filter>
         </activity>
+
+        <meta-data
+                android:name="preloaded_fonts"
+                android:resource="@array/preloaded_fonts"/>
     </application>
 
 </manifest>
