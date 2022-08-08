@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:app="http://schemas.android.com/apk/res-auto" android:layout_width="match_parent"
+              android:layout_height="wrap_content" android:orientation="horizontal"
+                android:padding="10dp">
+
+
+    <TextView
+            android:text="번호"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/android_example_number"
+            android:layout_gravity="center_vertical"
+            android:fontFamily="@font/noto_sans_bold"/>
+    <TextView
+            android:text="제목"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/android_example_title"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="15dp"
+            android:fontFamily="@font/noto_sans_bold"/>
+
+    <View    android:layout_width="0dp"
+             android:layout_height="0dp"
+             android:layout_weight="1" />
+
+    <ImageView
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:id="@+id/android_example_image"
+            app:srcCompat="@drawable/android_example_point_three"
+            android:layout_gravity="right|center_vertical"/>
+
+</LinearLayout>
