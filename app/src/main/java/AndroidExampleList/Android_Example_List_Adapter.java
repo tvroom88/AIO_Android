@@ -1,6 +1,8 @@
 package AndroidExampleList;
 
+import AndroidExampleData.Android_Lists_Model;
 import android.content.Context;
+import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -9,18 +11,13 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 import com.example.aio_android.R;
-
 import java.util.List;
 
 public class Android_Example_List_Adapter extends RecyclerView.Adapter<Android_Example_List_Adapter.CustomViewHolder> {
 
-    private List<Android_Example_Item> android_example_code_list = null;
-
-    //생성자로 Model에서 받아올 내용 초기화.
-    public Android_Example_List_Adapter(List<Android_Example_Item> data){
-        this.android_example_code_list = data;
-    }
-
+    private List<Android_Example_Item> android_example_code_list = Android_Lists_Model.getInstance().getAndroid_example_code_list();
+    private List<Class> android_example_class_list = Android_Lists_Model.getInstance().get_Class_List();
+    private int pos = 0;
 
     // onCreateViewHolder : 아이템 뷰를 위한 뷰홀더 객체를 생성하여 리턴
     @NonNull
@@ -30,10 +27,9 @@ public class Android_Example_List_Adapter extends RecyclerView.Adapter<Android_E
         LayoutInflater inflater = (LayoutInflater) context.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
 
         View view = inflater.inflate(R.layout.android_example_list_item, parent, false);
-        Android_Example_List_Adapter.CustomViewHolder viewholder = new Android_Example_List_Adapter.CustomViewHolder(view);
+        Android_Example_List_Adapter.CustomViewHolder viewholder = new Android_Example_List_Adapter.CustomViewHolder(view, parent.getContext());
 
         return viewholder;
-
     }
 
     //여기서 View와 받아온 데이터를 연결시켜주는 부분.
@@ -64,14 +60,21 @@ public class Android_Example_List_Adapter extends RecyclerView.Adapter<Android_E
         TextView title;
         ImageView image1;
 
-
-        public CustomViewHolder(View view) {
+        public CustomViewHolder(View view, Context mContext) {
             super(view);
 
             // 뷰 객체에 대한 참조
             number = itemView.findViewById(R.id.android_example_number);
             title = itemView.findViewById(R.id.android_example_title);
             image1 = itemView.findViewById(R.id.android_example_image);
+
+//            AtomicInteger pos = new AtomicInteger();
+
+            view.setOnClickListener(v -> {
+                pos = (getAdapterPosition());
+                Intent intent = new Intent(mContext, android_example_class_list.get(pos));
+                mContext.startActivity(intent);
+            });
         }
     }
 }

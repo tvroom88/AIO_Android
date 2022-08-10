@@ -13,6 +13,7 @@
         <entry key="app/src/main/res/font/font.xml" value="0.18177083333333333" />
         <entry key="app/src/main/res/font/noto_sans_bold.xml" value="0.1828125" />
         <entry key="app/src/main/res/layout-v26/activity_main.xml" value="0.5045076533115457" />
+        <entry key="app/src/main/res/layout/activity_and_fragment.xml" value="0.24655923871612576" />
         <entry key="app/src/main/res/layout/activity_data_binding_example.xml" value="0.15260416666666668" />
         <entry key="app/src/main/res/layout/activity_main.xml" value="0.15695300588420275" />
         <entry key="app/src/main/res/layout/activity_mvc_easy_example.xml" value="0.13854166666666667" />
@@ -20,6 +21,9 @@
         <entry key="app/src/main/res/layout/activity_mvvm_easy_example.xml" value="0.1453900709219858" />
         <entry key="app/src/main/res/layout/android_example_list.xml" value="0.2821557971014493" />
         <entry key="app/src/main/res/layout/android_example_list_item.xml" value="0.2821557971014493" />
+        <entry key="app/src/main/res/layout/android_four_components_list.xml" value="0.15260416666666668" />
+        <entry key="app/src/main/res/layout/fragment_a.xml" value="0.2821557971014493" />
+        <entry key="app/src/main/res/layout/fragment_b.xml" value="0.2821557971014493" />
         <entry key="app/src/main/res/layout/layout.xml" value="0.2821557971014493" />
         <entry key="app/src/main/res/mipmap-anydpi-v26/book.xml" value="0.32916666666666666" />
         <entry key="app/src/main/res/mipmap-anydpi-v26/book_round.xml" value="0.32916666666666666" />
