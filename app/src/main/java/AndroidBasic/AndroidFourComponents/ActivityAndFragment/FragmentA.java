@@ -1,4 +1,4 @@
-package AndroidBasic.AndroidFourComponents;
+package AndroidBasic.AndroidFourComponents.ActivityAndFragment;
 
 import android.os.Bundle;
 import androidx.fragment.app.Fragment;

@@ -1,4 +1,4 @@
-package AndroidBasic.AndroidFourComponents;
+package AndroidBasic.AndroidFourComponents.ActivityAndFragment;
 
 import android.os.Bundle;
 import androidx.fragment.app.Fragment;
@@ -8,7 +8,6 @@ import android.view.ViewGroup;
 import com.example.aio_android.R;
 
 public class FragmentB extends Fragment {
-
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,

@@ -1,5 +1,7 @@
 package AndroidBasic.AndroidFourComponents;
 
+import AndroidBasic.AndroidFourComponents.ActivityAndFragment.Activity_And_Fragment;
+import AndroidBasic.AndroidFourComponents.Service.ServiceActivity;
 import AndroidExampleData.Android_Lists_Model;
 import AndroidExampleList.Android_Example_Item;
 import android.content.Context;
@@ -12,7 +14,6 @@ import android.widget.ImageView;
 import android.widget.TextView;
 import com.example.aio_android.R;
 
-import java.util.ArrayList;
 import java.util.List;
 
 public class Android_Four_Components_Adapter extends BaseAdapter {
@@ -73,7 +74,8 @@ public class Android_Four_Components_Adapter extends BaseAdapter {
                 Intent intent = new Intent(context, Activity_And_Fragment.class);
                 context.startActivity(intent);
             }else if(position == 1){
-
+                Intent intent = new Intent(context, ServiceActivity.class);
+                context.startActivity(intent);
             }else if(position == 2){
 
             }else{
