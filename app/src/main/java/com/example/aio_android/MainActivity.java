@@ -9,11 +9,14 @@ import androidx.appcompat.app.AppCompatActivity;
 // 앱의 가장 첫번째 화면
 public class MainActivity extends AppCompatActivity {
 
+    public static MainActivity mActivity;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
         setContentView(R.layout.activity_main);
+
+        mActivity = this;
 
         // Button을 Custom하게 하기위해 LinearLayout으로 만듬.
         LinearLayout main_activity_button = findViewById(R.id.MainActivityButton1);

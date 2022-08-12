@@ -1,4 +1,4 @@
-package AndroidBasic.DataBinding;
+package AndroidBasic.JetPack;
 
 import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;

@@ -2,6 +2,8 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
           package="com.example.aio_android">
 
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE"/>
+
     <application
             android:allowBackup="true"
             android:icon="@mipmap/ic_launcher"
@@ -10,7 +12,17 @@
             android:supportsRtl="true"
             android:theme="@style/Theme.AIO_Android">
         <activity
-                android:name="AndroidBasic.AndroidFourComponents.Activity_And_Fragment"
+                android:name="AndroidBasic.AndroidFourComponents.Service.ServiceActivity"
+                android:exported="true"/>
+
+        <service
+                android:name="AndroidBasic.AndroidFourComponents.Service.ServiceA"
+                android:enabled="true"
+                android:exported="true">
+        </service>
+
+        <activity
+                android:name="AndroidBasic.AndroidFourComponents.ActivityAndFragment.Activity_And_Fragment"
                 android:exported="true"/>
         <activity
                 android:name="AndroidBasic.AndroidFourComponents.Android_Four_Components_List"
@@ -19,7 +31,7 @@
                 android:name="AndroidExampleList.Android_Example_List"
                 android:exported="true"/>
         <activity
-                android:name="AndroidBasic.DataBinding.DataBinding_Example"
+                android:name="AndroidBasic.JetPack.DataBinding_Example"
                 android:exported="true"/>
         <activity
                 android:name="AndroidBasic.AndroidDesign.MVVM_easy_example"
@@ -40,9 +52,21 @@
             </intent-filter>
         </activity>
 
+        <receiver
+                android:name="AndroidBasic.AndroidFourComponents.Service.AutoDismissReceiver"
+                android:enabled="true"
+                android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED" />
+            </intent-filter>
+        </receiver>
+
         <meta-data
                 android:name="preloaded_fonts"
                 android:resource="@array/preloaded_fonts"/>
+
+
+
     </application>
 
 </manifest>
