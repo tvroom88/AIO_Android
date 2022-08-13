@@ -26,7 +26,7 @@ public class Android_Example_List extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.android_example_list);
+        setContentView(R.layout.example_list);
 
         mRecyclerView = findViewById(R.id.android_example_list_recycler1);
         mRecyclerView.addItemDecoration(new DividerItemDecoration(this, DividerItemDecoration.VERTICAL));

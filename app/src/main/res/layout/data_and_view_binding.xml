@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Data Binding의 root는 <layout> -->
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <!-- 1. 레이아웃뷰와 바인딩할 데이터들 명칭과 클래스지정   -->
+    <data>
+        <!-- 데이터바인딩으로 연결할 User클래스 객체를 이 레이아웃에서는 user 라는 이름으로 참조하여 사용하겠다는 설정  -->
+        <variable
+                name="user"
+                type="AndroidBasic.JetPack.User" />
+
+    </data>
+
+    <!-- 2. 레이아웃 뷰 : 기존에 root로 만들었던 뷰   -->
+    <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            tools:viewBindingIgnore="true"
+            android:padding="16dp">
+
+        <TextView
+                android:text="DataBinding과 ViewBinding이 적용되어 있습니다."
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" android:id="@+id/binding_textview1"
+                android:gravity="center"
+                android:fontFamily="@font/korean"
+                android:textSize="20sp"/>
+
+        <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp">
+            <TextView
+                    android:text="이름 : "
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" android:id="@+id/textView4"
+                    android:textSize="20sp"/>
+            <TextView
+                    android:text="@{user.name}"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" android:id="@+id/binding_textview2"
+                    android:gravity="center" android:fontFamily="@font/korean"
+                    android:textSize="20sp"/>
+        </LinearLayout>
+
+        <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp">
+            <TextView
+                    android:text="나이 : "
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" android:id="@+id/textView5"
+                    android:textSize="20sp"/>
+            <TextView
+                    android:text="@{String.valueOf(user.age)}"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" android:id="@+id/binding_textview3"
+                    android:gravity="center"
+                    android:textSize="20sp"/>
+        </LinearLayout>
+
+        <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="text"
+                android:ems="10"
+                android:id="@+id/binding_edittext1"
+                android:hint="Name"
+                android:autofillHints="Name"
+                android:minHeight="48dp"
+                tools:ignore="SpeakableTextPresentCheck"/>
+
+        <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="number"
+                android:ems="10"
+                android:id="@+id/binding_edittext2"
+                android:hint="Age"
+                android:autofillHints="Age"
+                android:minHeight="48dp"
+                tools:ignore="SpeakableTextPresentCheck"/>
+        <Button
+                android:text="Button"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" android:id="@+id/binding_button1"/>
+
+    </LinearLayout>
+</layout>

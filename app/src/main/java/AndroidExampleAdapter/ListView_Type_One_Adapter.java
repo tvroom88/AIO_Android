@@ -1,8 +1,5 @@
-package AndroidBasic.AndroidFourComponents;
+package AndroidExampleAdapter;
 
-import AndroidBasic.AndroidFourComponents.ActivityAndFragment.Activity_And_Fragment;
-import AndroidBasic.AndroidFourComponents.Service.ServiceActivity;
-import AndroidExampleData.Android_Lists_Model;
 import AndroidExampleList.Android_Example_Item;
 import android.content.Context;
 import android.content.Intent;
@@ -14,25 +11,30 @@ import android.widget.ImageView;
 import android.widget.TextView;
 import com.example.aio_android.R;
 
+
 import java.util.List;
 
-public class Android_Four_Components_Adapter extends BaseAdapter {
+public class ListView_Type_One_Adapter extends BaseAdapter {
 
+    private List<Android_Example_Item> android_example_code_list;
+    private List<Class> android_example_class_list;
     private TextView numTextView;
     private TextView titleTextView;
     private ImageView iconImageView;
 
-    //ListView에
-    private List<Android_Example_Item> four_component_list = Android_Lists_Model.getInstance().getAndroid_four_component_list();
+    public ListView_Type_One_Adapter(List<Android_Example_Item> android_example_code_list, List<Class> android_example_class_list){
+        this.android_example_code_list = android_example_code_list;
+        this.android_example_class_list = android_example_class_list;
+    }
 
     @Override
     public int getCount() {
-        return four_component_list.size();
+        return android_example_code_list.size();
     }
 
     @Override
     public Object getItem(int position) {
-        return four_component_list.get(position);
+        return android_example_code_list.get(position);
     }
 
     @Override
@@ -48,14 +50,14 @@ public class Android_Four_Components_Adapter extends BaseAdapter {
 
         if(convertView == null){
             LayoutInflater inflater = (LayoutInflater) context.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
-            convertView = inflater.inflate(R.layout.android_example_list_item, parent, false);
+            convertView = inflater.inflate(R.layout.example_list_item, parent, false);
         }
 
         numTextView = (TextView) convertView.findViewById(R.id.android_example_number);
         titleTextView = (TextView) convertView.findViewById(R.id.android_example_title);
         iconImageView = (ImageView) convertView.findViewById(R.id.android_example_image);
 
-        Android_Example_Item item = four_component_list.get(position);
+        Android_Example_Item item = android_example_code_list.get(position);
 
         numTextView.setText(String.valueOf(item.getNumber()));
         titleTextView.setText(item.getTitle());
@@ -67,22 +69,11 @@ public class Android_Four_Components_Adapter extends BaseAdapter {
             iconImageView.setImageResource(R.drawable.android_example_point_three);
         }
 
-
         convertView.setOnClickListener(v -> {
-
-            if(position == 0){
-                Intent intent = new Intent(context, Activity_And_Fragment.class);
-                context.startActivity(intent);
-            }else if(position == 1){
-                Intent intent = new Intent(context, ServiceActivity.class);
-                context.startActivity(intent);
-            }else if(position == 2){
-
-            }else{
-
-            }
-
+            Intent intent = new Intent(context, android_example_class_list.get(position));
+            context.startActivity(intent);
         });
         return convertView;
     }
+
 }

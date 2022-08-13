@@ -2,7 +2,11 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
           package="com.example.aio_android">
 
+    <!-- Service내에서 Foreground service를 사용하기 위해 추가한 permission -->
     <uses-permission android:name="android.permission.FOREGROUND_SERVICE"/>
+
+    <!-- Content Provider 예제에서 Content Resolver를 이용해 이미지를 얻기위해서는 permission이 필요함 -->
+    <uses-permission android:name="android.permission.READ_CONTACTS"/>
 
     <application
             android:allowBackup="true"
@@ -11,6 +15,12 @@
             android:roundIcon="@mipmap/ic_launcher_round"
             android:supportsRtl="true"
             android:theme="@style/Theme.AIO_Android">
+        <activity
+                android:name="AndroidBasic.AndroidFourComponents.ContentProvider.ContentProviderActivity"
+                android:exported="true"/>
+        <activity
+                android:name="AndroidBasic.JetPack.Jetpack_List"
+                android:exported="true"/>
         <activity
                 android:name="AndroidBasic.AndroidFourComponents.Service.ServiceActivity"
                 android:exported="true"/>
@@ -25,13 +35,13 @@
                 android:name="AndroidBasic.AndroidFourComponents.ActivityAndFragment.Activity_And_Fragment"
                 android:exported="true"/>
         <activity
-                android:name="AndroidBasic.AndroidFourComponents.Android_Four_Components_List"
+                android:name="AndroidBasic.AndroidFourComponents.Four_Components_List"
                 android:exported="true"/>
         <activity
                 android:name="AndroidExampleList.Android_Example_List"
                 android:exported="true"/>
         <activity
-                android:name="AndroidBasic.JetPack.DataBinding_Example"
+                android:name="AndroidBasic.JetPack.DataAndViewBinding"
                 android:exported="true"/>
         <activity
                 android:name="AndroidBasic.AndroidDesign.MVVM_easy_example"
@@ -57,16 +67,19 @@
                 android:enabled="true"
                 android:exported="true">
             <intent-filter>
-                <action android:name="android.intent.action.BOOT_COMPLETED" />
+                <action android:name="android.intent.action.BOOT_COMPLETED"/>
             </intent-filter>
         </receiver>
+
+        <provider
+                android:name="AndroidBasic.AndroidFourComponents.ContentProvider.MyContentProvider"
+                android:authorities="com.demo.user.provider"
+                android:enabled="true"
+                android:exported="true"/>
 
         <meta-data
                 android:name="preloaded_fonts"
                 android:resource="@array/preloaded_fonts"/>
-
-
-
     </application>
 
 </manifest>

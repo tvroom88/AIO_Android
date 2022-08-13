@@ -1,6 +1,6 @@
 package AndroidExampleList;
 
-import AndroidExampleData.Android_Lists_Model;
+import AndroidExampleModel.Android_Lists_Model;
 import android.content.Context;
 import android.content.Intent;
 import android.view.LayoutInflater;
@@ -26,7 +26,7 @@ public class Android_Example_List_Adapter extends RecyclerView.Adapter<Android_E
         Context context = parent.getContext();
         LayoutInflater inflater = (LayoutInflater) context.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
 
-        View view = inflater.inflate(R.layout.android_example_list_item, parent, false);
+        View view = inflater.inflate(R.layout.example_list_item, parent, false);
         Android_Example_List_Adapter.CustomViewHolder viewholder = new Android_Example_List_Adapter.CustomViewHolder(view, parent.getContext());
 
         return viewholder;
