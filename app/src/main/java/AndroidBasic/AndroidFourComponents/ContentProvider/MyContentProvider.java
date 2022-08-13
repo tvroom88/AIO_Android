@@ -31,40 +31,30 @@ public class MyContentProvider extends ContentProvider {
 
     static {
 
-        // to match the content URI
-        // every time user access table under content provider
+        // to match the content URI,  every time user access table under content provider
         uriMatcher = new UriMatcher(UriMatcher.NO_MATCH);
 
         // to access whole table
         uriMatcher.addURI(PROVIDER_NAME, "users", uriCode);
 
-        // to access a particular row
-        // of the table
+        // to access a particular row of the table
         uriMatcher.addURI(PROVIDER_NAME, "users/*", uriCode);
     }
-    @Override
-    public String getType(Uri uri) {
-        switch (uriMatcher.match(uri)) {
-            case uriCode:
-                return "vnd.android.cursor.dir/users";
-            default:
-                throw new IllegalArgumentException("Unsupported URI: " + uri);
-        }
-    }
+
+
     // creating the database
     @Override
     public boolean onCreate() {
-        Context context = getContext();
-        DatabaseHelper dbHelper = new DatabaseHelper(context);
+        DatabaseHelper dbHelper = new DatabaseHelper(getContext());
         db = dbHelper.getWritableDatabase();
         if (db != null) {
             return true;
         }
         return false;
     }
+
     @Override
-    public Cursor query(Uri uri, String[] projection, String selection,
-                        String[] selectionArgs, String sortOrder) {
+    public Cursor query(Uri uri, String[] projection, String selection, String[] selectionArgs, String sortOrder) {
         SQLiteQueryBuilder qb = new SQLiteQueryBuilder();
         qb.setTables(TABLE_NAME);
         switch (uriMatcher.match(uri)) {
@@ -74,16 +64,22 @@ public class MyContentProvider extends ContentProvider {
             default:
                 throw new IllegalArgumentException("Unknown URI " + uri);
         }
-        if (sortOrder == null || sortOrder == "") {
+        if (sortOrder == null || sortOrder.equals("")) {
             sortOrder = id;
         }
-        Cursor c = qb.query(db, projection, selection, selectionArgs, null,
-                null, sortOrder);
+        Cursor c = qb.query(db, projection, selection, selectionArgs, null, null, sortOrder);
         c.setNotificationUri(getContext().getContentResolver(), uri);
         return c;
     }
 
-    // adding data to the database
+    @Override
+    public String getType(Uri uri) {
+        if (uriMatcher.match(uri) == uriCode) {
+            return "vnd.android.cursor.dir/users";
+        }
+        throw new IllegalArgumentException("알 수 없는 URI: " + uri);
+    }
+
     @Override
     public Uri insert(Uri uri, ContentValues values) {
         long rowID = db.insert(TABLE_NAME, "", values);
@@ -92,19 +88,17 @@ public class MyContentProvider extends ContentProvider {
             getContext().getContentResolver().notifyChange(_uri, null);
             return _uri;
         }
-        throw new SQLiteException("Failed to add a record into " + uri);
+        throw new SQLiteException("추가 실패 : " + uri);
     }
 
     @Override
     public int update(Uri uri, ContentValues values, String selection,
                       String[] selectionArgs) {
         int count = 0;
-        switch (uriMatcher.match(uri)) {
-            case uriCode:
-                count = db.update(TABLE_NAME, values, selection, selectionArgs);
-                break;
-            default:
-                throw new IllegalArgumentException("Unknown URI " + uri);
+        if (uriMatcher.match(uri) == uriCode) {
+            count = db.update(TABLE_NAME, values, selection, selectionArgs);
+        } else {
+            throw new IllegalArgumentException("알 수 없는 URI " + uri);
         }
         getContext().getContentResolver().notifyChange(uri, null);
         return count;
@@ -118,14 +112,14 @@ public class MyContentProvider extends ContentProvider {
                 count = db.delete(TABLE_NAME, selection, selectionArgs);
                 break;
             default:
-                throw new IllegalArgumentException("Unknown URI " + uri);
+                throw new IllegalArgumentException("알 수 없는 URI " + uri);
         }
         getContext().getContentResolver().notifyChange(uri, null);
         return count;
     }
 
-    // creating object of database
-    // to perform query
+
+    // --- SQLiteDatabase Part --
     private SQLiteDatabase db;
 
     // declaring name of the database

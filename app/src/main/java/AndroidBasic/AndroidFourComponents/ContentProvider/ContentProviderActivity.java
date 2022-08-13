@@ -17,6 +17,10 @@ import android.os.Bundle;
 import com.example.aio_android.R;
 
 /**
+ *  Content Provider 예제
+ *  (1) MyContentProvider.java : ContentProvider과 sqlite 부분 구현되어있음.
+ *  (2) ContentProviderActivity : getContentResolver를 통해 ContentProvider로 접근해서
+ *      insert, query, update, delete 사용방법 구현
  */
 public class ContentProviderActivity extends AppCompatActivity {
     Uri CONTENT_URI = Uri.parse("content://com.demo.user.provider/users");
@@ -27,15 +31,19 @@ public class ContentProviderActivity extends AppCompatActivity {
         setContentView(R.layout.content_provider);
 
         Button btn1 = findViewById(R.id.insertButton);
-        btn1.setOnClickListener(v -> onClickAddDetails(v));
+        btn1.setOnClickListener(this::insertUser);
 
-        Button btn2 = findViewById(R.id.removeButton);
-        btn2.setOnClickListener(v -> {
-            delete(v);
-        });
+        Button btn2 = findViewById(R.id.loadButton);
+        btn2.setOnClickListener(this::loadData);
 
-        Button btn3 = findViewById(R.id.loadButton);
-        btn3.setOnClickListener(v -> onClickShowDetails(v));
+        Button btn3 = findViewById(R.id.updateButton);
+        btn3.setOnClickListener(this::updateUser);
+
+        Button btn4 = findViewById(R.id.removeAllButton);
+        btn4.setOnClickListener(this::removeAll);
+
+        Button btn5 = findViewById(R.id.removeOneButton);
+        btn5.setOnClickListener(this::removeOne);
     }
 
     @Override
@@ -45,52 +53,81 @@ public class ContentProviderActivity extends AppCompatActivity {
         return true;
     }
 
-    public void onClickAddDetails(View view) {
-
-        // class to add values in the database
+    // 데이터 저장하기
+    public void insertUser(View view) {
         ContentValues values = new ContentValues();
-
-        // fetching text from user
         values.put(MyContentProvider.name, ((EditText) findViewById(R.id.textName)).getText().toString());
+        getContentResolver().insert(CONTENT_URI, values);
 
-        // inserting into database through content URI
-        getContentResolver().insert(MyContentProvider.CONTENT_URI, values);
-
-        // displaying a toast message
         Toast.makeText(getBaseContext(), "New Record Inserted", Toast.LENGTH_LONG).show();
     }
 
-    //public int delete(Uri uri, String selection, String[] selectionArgs) {
-    public void delete(View view) {
+    //모든 데이터 지우기
+    public void removeAll(View view) {
 
-        // inserting into database through content URI
+        // 2번째는 where라서 null 처리 하면 모든 데이터 지우는걸로 됨.
         getContentResolver().delete(MyContentProvider.CONTENT_URI, null, null);
 
-        // displaying a toast message
         Toast.makeText(getBaseContext(), "Delete All records", Toast.LENGTH_LONG).show();
     }
 
+    // User 데이터 하나 지우기
+    public void removeOne(View view) {
+        String str = ((EditText) findViewById(R.id.textName)).getText().toString();
+        if(str.equals("")){
+            Toast.makeText(getBaseContext(), "EditText에 이름을 적어주세요", Toast.LENGTH_LONG).show();
+        }else {
+            //지울 특성 고리는 부분 : (1)id (2)name 중에 여기서는 name 고름
+            String selection = "name = ?";
+            String nameStr = ((EditText) findViewById(R.id.textName)).getText().toString();
+            String[] selectionArgs = new String[]{nameStr};
+            int count = getContentResolver().delete(CONTENT_URI, selection, selectionArgs);
+            TextView resultView = findViewById(R.id.res);
+            resultView.setText("delete 결과 : " + count);
+        }
+    }
+
+    // 유저 데이터 업데이트하기. 맞는 데이터가 없다면 업데이트 안함.
+    public void updateUser(View view){
+        String str = ((EditText) findViewById(R.id.textName)).getText().toString();
+        TextView resultView= findViewById(R.id.res);
+        if(str.equals("")){
+            Toast.makeText(getBaseContext(), "EditText에 이름을 적어주세요", Toast.LENGTH_LONG).show();
+        }else{
+            String selection = "name = ?";
+            String[] strArr = str.split(" ");
+
+            if(strArr.length != 2){
+                resultView.setText("지울이름과 새로운이름을 적어주세요. 앞에 단어는 지울단어이고 뒤에 단어는 새로운 단어입니다");
+            }else{
+                String[] selectionArgs = new String[] {strArr[0]};
+                ContentValues updateValue = new ContentValues();
+                updateValue.put(MyContentProvider.name, strArr[1]);
+                int count = getContentResolver().update(CONTENT_URI, updateValue, selection, selectionArgs);
+                resultView.setText("update 결과 : " + count);
+            }
+        }
+    }
+
+    // 저장되어있는 모든 데이터 불러오기
     @SuppressLint("Range")
-    public void onClickShowDetails(View view) {
-        // inserting complete table details in this text field
+    public void loadData(View view) {
         TextView resultView= findViewById(R.id.res);
 
-        // creating a cursor object of the
-        // content URI
-        Cursor cursor = getContentResolver().query(Uri.parse("content://com.demo.user.provider/users"), null, null, null, null);
+        Cursor cursor = getContentResolver().query(CONTENT_URI, null, null, null, null);
 
-        // iteration of the cursor
-        // to print whole table
         if(cursor.moveToFirst()) {
             StringBuilder strBuild=new StringBuilder();
             while (!cursor.isAfterLast()) {
-                strBuild.append("\n").append(cursor.getString(cursor.getColumnIndex("id"))).append("-").append(cursor.getString(cursor.getColumnIndex("name")));
+                String id = cursor.getString(cursor.getColumnIndex("id"));
+                String name = cursor.getString(cursor.getColumnIndex("name"));
+                strBuild.append("\n").append(id).append("-").append(name);
                 cursor.moveToNext();
             }
             resultView.setText(strBuild);
         }
         else {
-            resultView.setText("No Records Found");
+            resultView.setText("기록이 없습니다");
         }
     }
 }
