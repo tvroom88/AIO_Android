@@ -15,7 +15,7 @@ public class MVC_easy_example extends AppCompatActivity {
         super.onCreate(savedInstanceState);
 
         //View 부분
-        setContentView(R.layout.activity_mvc_easy_example);
+        setContentView(R.layout.mvc_easy_example);
         textView = findViewById(R.id.mvc_textview1);
 
         //Controller 부분

@@ -13,7 +13,7 @@ public class MVP_easy_example extends AppCompatActivity implements Presenter.Vie
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_mvp_easy_example);
+        setContentView(R.layout.mvp_easy_example);
 
         presenter = new PrsneterImpl(MVP_easy_example.this);
 

@@ -11,7 +11,7 @@ public class MVVM_easy_example extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_mvvm_easy_example);
+        setContentView(R.layout.mvvm_easy_example);
 
         viewModel = new ViewModel(MVVM_easy_example.this);
     }
