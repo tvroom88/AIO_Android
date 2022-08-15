@@ -1,12 +1,19 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
+          xmlns:tools="http://schemas.android.com/tools"
           package="com.example.aio_android">
-
     <!-- Service내에서 Foreground service를 사용하기 위해 추가한 permission -->
     <uses-permission android:name="android.permission.FOREGROUND_SERVICE"/>
 
     <!-- Content Provider 예제에서 Content Resolver를 이용해 이미지를 얻기위해서는 permission이 필요함 -->
     <uses-permission android:name="android.permission.READ_CONTACTS"/>
+
+    <!-- ContentResolverWithAlbum 예제 : 이미지 파일은 보통 SD카드에 저장되고 그걸불러오려면 허가를 내줘야함 -->
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+
+    <uses-permission android:name="android.permission.READ_CONTACTS"/>
+    <uses-permission android:name="android.permission.WRITE_CONTACTS"/>
 
     <application
             android:allowBackup="true"
@@ -15,6 +22,12 @@
             android:roundIcon="@mipmap/ic_launcher_round"
             android:supportsRtl="true"
             android:theme="@style/Theme.AIO_Android">
+        <activity
+                android:name="AndroidBasic.AndroidFourComponents.ContentResolverWithPhonebook.ContentResolverWIthPhoneBook"
+                android:exported="true"/>
+        <activity
+                android:name="AndroidBasic.AndroidFourComponents.ContentResolverWithAlbum.ContentResolverWithAlbum"
+                android:exported="true"/>
         <activity
                 android:name="AndroidBasic.AndroidFourComponents.ContentProvider.ContentProviderActivity"
                 android:exported="true"/>

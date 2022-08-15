@@ -2,6 +2,8 @@ package AndroidExampleModel;
 
 import AndroidBasic.AndroidFourComponents.ActivityAndFragment.Activity_And_Fragment;
 import AndroidBasic.AndroidFourComponents.ContentProvider.ContentProviderActivity;
+import AndroidBasic.AndroidFourComponents.ContentResolverWithAlbum.ContentResolverWithAlbum;
+import AndroidBasic.AndroidFourComponents.ContentResolverWithPhonebook.ContentResolverWIthPhoneBook;
 import AndroidBasic.AndroidFourComponents.Service.ServiceActivity;
 import AndroidExampleList.Android_Example_Item;
 import java.util.Arrays;
@@ -25,8 +27,10 @@ public class FourComponent_Model {
     private List<Android_Example_Item> android_four_component_list = Arrays.asList(
             new Android_Example_Item(1, "Activity and Fragment", true),
             new Android_Example_Item(2, "Service", true),
-            new Android_Example_Item(3, "Contents provider", true),
-            new Android_Example_Item(4, "Broadcast receiver", true)
+            new Android_Example_Item(3, "Content provider", true),
+            new Android_Example_Item(4, "Content receiver with Album", true),
+            new Android_Example_Item(5, "Content receiver with Phone book", true),
+            new Android_Example_Item(6, "Broadcast receiver", true)
     );
 
     public List<Android_Example_Item> getAndroid_four_component_list() {
@@ -39,6 +43,8 @@ public class FourComponent_Model {
             Activity_And_Fragment.class, //1
             ServiceActivity.class,       //2
             ContentProviderActivity.class, //3
+            ContentResolverWithAlbum.class, //3
+            ContentResolverWIthPhoneBook.class, //3
             ServiceActivity.class        //4
     );
 
