@@ -100,7 +100,7 @@ public class ContentResolverWIthPhoneBook extends AppCompatActivity {
                 name = cursor.getString(cursor.getColumnIndex(ContactsContract.Data.DISPLAY_NAME));
                 textView.append("Name : " + name);
                 // 모든 칼럼 이름 확인
-                String columns[] = cursor.getColumnNames();
+                String[] columns = cursor.getColumnNames();
                 for (String column : columns) {
                     int index = cursor.getColumnIndex(column);
                     String columnOutput = ("#" + index + " -> [" + column + "] " + cursor.getString(index));

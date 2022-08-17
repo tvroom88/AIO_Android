@@ -19,7 +19,7 @@ public class JetPack_Model {
     }
     //Singleton Pattern 적용 완료------------
 
-    private List<Android_Example_Item> JecPack_List = Arrays.asList(
+    private final List<Android_Example_Item> JecPack_List = Arrays.asList(
             new Android_Example_Item(1, "DataBinding과 ViewBinding", true),
             new Android_Example_Item(2, "DataBinding과 ViewBinding", true)
     );
@@ -30,7 +30,7 @@ public class JetPack_Model {
     }
 
     //JetPack class List
-    private List<Class> jetpack_class_list = Arrays.asList(
+    private final List<Class> jetpack_class_list = Arrays.asList(
             DataAndViewBinding.class, //1
             DataAndViewBinding.class //1
     );

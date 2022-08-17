@@ -1,6 +1,8 @@
 package AndroidExampleModel;
 
 import AndroidBasic.AndroidFourComponents.ActivityAndFragment.Activity_And_Fragment;
+import AndroidBasic.AndroidFourComponents.BroadcastReceiver.BroadcastActivity;
+import AndroidBasic.AndroidFourComponents.BroadcastReceiver.Broadcast_SMS_Activity;
 import AndroidBasic.AndroidFourComponents.ContentProvider.ContentProviderActivity;
 import AndroidBasic.AndroidFourComponents.ContentResolverWithAlbum.ContentResolverWithAlbum;
 import AndroidBasic.AndroidFourComponents.ContentResolverWithPhonebook.ContentResolverWIthPhoneBook;
@@ -24,7 +26,7 @@ public class FourComponent_Model {
 
     //Android_Four_Component_List
     //전체적 구성이 RecyclerView의 Item과 똑같아서 그대로 재활용
-    private List<Android_Example_Item> android_four_component_list = Arrays.asList(
+    private final List<Android_Example_Item> android_four_component_list = Arrays.asList(
             new Android_Example_Item(1, "Activity and Fragment", true),
             new Android_Example_Item(2, "Service", true),
             new Android_Example_Item(3, "Content provider", true),
@@ -39,13 +41,13 @@ public class FourComponent_Model {
 
 
     //안드로이드 four component class List
-    private List<Class> four_component_class_list = Arrays.asList(
-            Activity_And_Fragment.class, //1
-            ServiceActivity.class,       //2
-            ContentProviderActivity.class, //3
-            ContentResolverWithAlbum.class, //3
-            ContentResolverWIthPhoneBook.class, //3
-            ServiceActivity.class        //4
+    private final List<Class> four_component_class_list = Arrays.asList(
+            Activity_And_Fragment.class,        //1
+            ServiceActivity.class,              //2
+            ContentProviderActivity.class,      //3
+            ContentResolverWithAlbum.class,     //4
+            ContentResolverWIthPhoneBook.class, //5
+            BroadcastActivity.class             //6
     );
 
     //Getter method for 안드로이드 four component class List

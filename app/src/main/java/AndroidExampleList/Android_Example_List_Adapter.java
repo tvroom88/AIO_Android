@@ -15,8 +15,8 @@ import java.util.List;
 
 public class Android_Example_List_Adapter extends RecyclerView.Adapter<Android_Example_List_Adapter.CustomViewHolder> {
 
-    private List<Android_Example_Item> android_example_code_list = Android_Lists_Model.getInstance().getAndroid_example_code_list();
-    private List<Class> android_example_class_list = Android_Lists_Model.getInstance().get_Class_List();
+    private final List<Android_Example_Item> android_example_code_list = Android_Lists_Model.getInstance().getAndroid_example_code_list();
+    private final List<Class> android_example_class_list = Android_Lists_Model.getInstance().get_Class_List();
     private int pos = 0;
 
     // onCreateViewHolder : 아이템 뷰를 위한 뷰홀더 객체를 생성하여 리턴
