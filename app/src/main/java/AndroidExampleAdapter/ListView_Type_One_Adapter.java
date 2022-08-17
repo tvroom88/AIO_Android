@@ -16,8 +16,8 @@ import java.util.List;
 
 public class ListView_Type_One_Adapter extends BaseAdapter {
 
-    private List<Android_Example_Item> android_example_code_list;
-    private List<Class> android_example_class_list;
+    private final List<Android_Example_Item> android_example_code_list;
+    private final List<Class> android_example_class_list;
     private TextView numTextView;
     private TextView titleTextView;
     private ImageView iconImageView;
@@ -53,9 +53,9 @@ public class ListView_Type_One_Adapter extends BaseAdapter {
             convertView = inflater.inflate(R.layout.example_list_item, parent, false);
         }
 
-        numTextView = (TextView) convertView.findViewById(R.id.android_example_number);
-        titleTextView = (TextView) convertView.findViewById(R.id.android_example_title);
-        iconImageView = (ImageView) convertView.findViewById(R.id.android_example_image);
+        numTextView = convertView.findViewById(R.id.android_example_number);
+        titleTextView = convertView.findViewById(R.id.android_example_title);
+        iconImageView = convertView.findViewById(R.id.android_example_image);
 
         Android_Example_Item item = android_example_code_list.get(position);
 

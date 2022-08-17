@@ -107,7 +107,7 @@ public class ContentResolverWithAlbum extends AppCompatActivity {
                         startActivity(intent);
 
                     } catch (ActivityNotFoundException e){
-                        e.printStackTrace();;
+                        e.printStackTrace();
                         Intent intent = new Intent(Settings.ACTION_MANAGE_APPLICATIONS_SETTINGS);
                         startActivity(intent);
                     }
@@ -149,7 +149,7 @@ public class ContentResolverWithAlbum extends AppCompatActivity {
     }
 
     @Override
-    public void onRequestPermissionsResult(int requestCode, String permissions[], int[] grantResults) {
+    public void onRequestPermissionsResult(int requestCode, String[] permissions, int[] grantResults) {
         super.onRequestPermissionsResult(requestCode, permissions, grantResults);
         if (requestCode == 101) {
             for(int i=0; i<grantResults.length; i++){

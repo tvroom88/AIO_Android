@@ -3,17 +3,26 @@
           xmlns:tools="http://schemas.android.com/tools"
           package="com.example.aio_android">
     <!-- Service내에서 Foreground service를 사용하기 위해 추가한 permission -->
-    <uses-permission android:name="android.permission.FOREGROUND_SERVICE"/>
+    <uses-permission
+            android:name="android.permission.FOREGROUND_SERVICE"/>
 
     <!-- Content Provider 예제에서 Content Resolver를 이용해 이미지를 얻기위해서는 permission이 필요함 -->
-    <uses-permission android:name="android.permission.READ_CONTACTS"/>
+    <uses-permission
+            android:name="android.permission.READ_CONTACTS"/>
 
     <!-- ContentResolverWithAlbum 예제 : 이미지 파일은 보통 SD카드에 저장되고 그걸불러오려면 허가를 내줘야함 -->
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
-    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+    <uses-permission
+            android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
 
+    <!-- ContentResolverWithPhoneBook 예제 :  전화번호 기록 가져올떄 추가해야하는 부분 -->
     <uses-permission android:name="android.permission.READ_CONTACTS"/>
     <uses-permission android:name="android.permission.WRITE_CONTACTS"/>
+
+    <!--  Broadcast_SMS_Activity 예제 : SMS 받는 부분  -->
+    <uses-permission android:name="android.permission.RECEIVE_SMS" />
+    <uses-permission android:name="android.permission.SEND_SMS" />
+
 
     <application
             android:allowBackup="true"
@@ -22,6 +31,12 @@
             android:roundIcon="@mipmap/ic_launcher_round"
             android:supportsRtl="true"
             android:theme="@style/Theme.AIO_Android">
+        <activity
+                android:name="AndroidBasic.AndroidFourComponents.BroadcastReceiver.BroadcastActivity"
+                android:exported="true"/>
+        <activity
+                android:name="AndroidBasic.AndroidFourComponents.BroadcastReceiver.Broadcast_SMS_Activity"
+                android:exported="true"/>
         <activity
                 android:name="AndroidBasic.AndroidFourComponents.ContentResolverWithPhonebook.ContentResolverWIthPhoneBook"
                 android:exported="true"/>
@@ -73,8 +88,7 @@
 
                 <category android:name="android.intent.category.LAUNCHER"/>
             </intent-filter>
-        </activity>
-
+        </activity> <!-- foreground service 예제에서 Dismiss button 쓰려고 추가한 부분 -->
         <receiver
                 android:name="AndroidBasic.AndroidFourComponents.Service.AutoDismissReceiver"
                 android:enabled="true"
@@ -82,8 +96,17 @@
             <intent-filter>
                 <action android:name="android.intent.action.BOOT_COMPLETED"/>
             </intent-filter>
+        </receiver> <!-- Broadcast Receiver + Sms 예제를 위한 부분 -->
+        <receiver
+                android:name="AndroidBasic.AndroidFourComponents.BroadcastReceiver.SmsReceiver"
+                android:enabled="true"
+                android:exported="true">
+<!--            <intent-filter>-->
+            <intent-filter>
+                <action android:name="android.provider.Telephony.SMS_RECEIVED"/>
+            </intent-filter>
         </receiver>
-
+        <!-- Content provider를 위한 부분 -->
         <provider
                 android:name="AndroidBasic.AndroidFourComponents.ContentProvider.MyContentProvider"
                 android:authorities="com.demo.user.provider"

@@ -47,10 +47,7 @@ public class MyContentProvider extends ContentProvider {
     public boolean onCreate() {
         DatabaseHelper dbHelper = new DatabaseHelper(getContext());
         db = dbHelper.getWritableDatabase();
-        if (db != null) {
-            return true;
-        }
-        return false;
+        return db != null;
     }
 
     @Override

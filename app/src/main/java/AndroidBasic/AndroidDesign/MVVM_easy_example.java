@@ -23,8 +23,8 @@ public class MVVM_easy_example extends AppCompatActivity {
     }
 
     class ViewModel {
-        private Activity activity;
-        private Model model;
+        private final Activity activity;
+        private final Model model;
         private TextView textView;
 
         ViewModel(Activity activity){

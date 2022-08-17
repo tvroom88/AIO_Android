@@ -25,7 +25,7 @@ public class Android_Lists_Model {
     //Singleton Pattern 적용 완료------------
 
     // RecyclerView의 Item에 들어갈 내용들
-    private List<Android_Example_Item> android_example_code_list = Arrays.asList(
+    private final List<Android_Example_Item> android_example_code_list = Arrays.asList(
             new Android_Example_Item(1, "안드로이드 4대 컴포넌트", false),
             new Android_Example_Item(2, "안드로이드, 프래그먼트 라이프 사이클", true),
             new Android_Example_Item(3, "인텐트", true),
@@ -41,7 +41,7 @@ public class Android_Lists_Model {
     }
 
 
-    private List<Class> class_list = Arrays.asList(
+    private final List<Class> class_list = Arrays.asList(
             Four_Components_List.class, //1
             Four_Components_List.class, //2
             Four_Components_List.class, //3

@@ -38,8 +38,8 @@ public class MVP_easy_example extends AppCompatActivity implements Presenter.Vie
 
     //PresenterImpl (Presenter의 구현체)
     class PrsneterImpl implements Presenter{
-        private Presenter.View view;
-        private Model model;
+        private final Presenter.View view;
+        private final Model model;
 
         PrsneterImpl(View view){
             this.view = view;
