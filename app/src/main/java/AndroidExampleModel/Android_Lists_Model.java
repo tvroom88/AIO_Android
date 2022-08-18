@@ -1,6 +1,7 @@
 package AndroidExampleModel;
 
 import AndroidBasic.AndroidFourComponents.Four_Components_List;
+import AndroidBasic.AndroidLifeCycle.LifeCycleActivity;
 import AndroidBasic.JetPack.Jetpack_List;
 import AndroidExampleList.Android_Example_Item;
 
@@ -28,7 +29,7 @@ public class Android_Lists_Model {
     private final List<Android_Example_Item> android_example_code_list = Arrays.asList(
             new Android_Example_Item(1, "안드로이드 4대 컴포넌트", false),
             new Android_Example_Item(2, "안드로이드, 프래그먼트 라이프 사이클", true),
-            new Android_Example_Item(3, "인텐트", true),
+            new Android_Example_Item(3, "인텐트와 번들", true),
             new Android_Example_Item(4, "핸들러", true),
             new Android_Example_Item(5, "컨텍스트", true),
             new Android_Example_Item(6, "디자인패턴", true),
@@ -43,7 +44,7 @@ public class Android_Lists_Model {
 
     private final List<Class> class_list = Arrays.asList(
             Four_Components_List.class, //1
-            Four_Components_List.class, //2
+            LifeCycleActivity .class, //2
             Four_Components_List.class, //3
             Four_Components_List.class, //4
             Four_Components_List.class, //5

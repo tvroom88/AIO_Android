@@ -1,0 +1,59 @@
+<LinearLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="5dp"
+        tools:context="AndroidBasic.AndroidLifeCycle.ui.home.HomeFragment">
+
+    <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background='@drawable/rectangle_border'
+            android:padding="10dp">
+
+        <LinearLayout android:layout_width="match_parent"
+                      android:layout_height="wrap_content"
+                      android:orientation="vertical">
+
+            <TextView
+                    android:id="@+id/text_dashboard"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textAlignment="center"
+                    android:textSize="20sp"/>
+
+            <ImageView
+                    android:src="@drawable/lifecycle_fragment"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/lifecycle_imageview"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginRight="5dp"
+                    android:scaleType="centerInside"
+                    android:adjustViewBounds="true"/>
+
+            <TextView
+                    android:id="@+id/text_dashboard2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textAlignment="center"
+                    android:layout_marginTop="10dp"
+                    android:textSize="20sp"/>
+
+            <ImageView
+                    android:src="@drawable/lifecycle_fragment2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/lifecycle_imageview2"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginRight="5dp"
+                    android:layout_marginBottom="20dp"
+                    android:scaleType="centerInside"
+                    android:adjustViewBounds="true"/>
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>
