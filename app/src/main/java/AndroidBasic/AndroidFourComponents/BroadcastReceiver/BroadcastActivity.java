@@ -15,6 +15,12 @@ import com.gun0912.tedpermission.normal.TedPermission;
 
 import java.util.List;
 
+/**
+ *  Broadcast Receiver 예제
+ *  (1) Broadcast Receiver를 쓰려면 AndroidManifest.xml에 <receiver></receiver> 등록해야함
+ *  이 Activity에서는 SMS를 보내는 부분 구현
+ *  SMS를 보내면 Broadcast_SMS_Activity가 자동적으로 연결됨
+ */
 public class BroadcastActivity extends AppCompatActivity {
 
     Button buttonSend;
