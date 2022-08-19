@@ -1,17 +1,10 @@
 package AndroidBasic.AndroidFourComponents.Service;
 
-import android.app.NotificationManager;
-import android.app.PendingIntent;
-import android.content.Context;
 import android.content.Intent;
 import android.os.Build;
-import android.view.View;
-import android.widget.Button;
-import android.widget.TextView;
-import android.widget.Toast;
-import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
-import com.example.aio_android.R;
+import com.example.aio_android.BaseActivity;
+import com.example.aio_android.databinding.ServiceBinding;
 
 
 // Android Service : (1) foreground (2) background (3) bound
@@ -25,28 +18,35 @@ import com.example.aio_android.R;
 
 // 해결해야할 문제 :
 // (1) 앱이 켜져있을때는 dismiss 버튼을 눌러도 안됨
-public class ServiceActivity extends AppCompatActivity {
+public class ServiceActivity extends BaseActivity {
+
     public static final String NOTIFICATION_ID = "NOTIFICATION_ID";
+    public static ServiceActivity mActivity;
+    final String title = "Service 에제";
+    private ServiceBinding binding;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.service);
+
+        binding = ServiceBinding.inflate(getLayoutInflater());
+        setContentView(binding.getRoot());
+
+        setToolbar(binding.layout.toolbar, binding.layout.toolbarImage, binding.layout.tooblarTitle, title);
+
+        //Service 부분을 위해서
+        mActivity = this;
 
         Intent serviceIntent = new Intent(ServiceActivity.this, ServiceA.class);
 
         //서비스와 연결
-        Button button1 = findViewById(R.id.start_btn);
-        Button button2 = findViewById(R.id.end_btn);
-        TextView tv1 = findViewById(R.id.text);
-
-        button1.setOnClickListener(view -> {
+        binding.startBtn.setOnClickListener(view -> {
             if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O)
                 startForegroundService(serviceIntent);
             else startService(serviceIntent);
         });
 
-        button2.setOnClickListener(view -> {
+        binding.endBtn.setOnClickListener(view -> {
             stopService(serviceIntent);
         });
 

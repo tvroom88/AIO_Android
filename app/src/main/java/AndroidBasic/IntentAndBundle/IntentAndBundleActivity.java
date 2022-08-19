@@ -1,14 +1,25 @@
 package AndroidBasic.IntentAndBundle;
 
-import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
-import com.example.aio_android.R;
+import android.view.View;
+import androidx.annotation.Nullable;
+import com.example.aio_android.BaseActivity;
+import com.example.aio_android.databinding.IntentAndBundleBinding;
 
-public class IntentAndBundleActivity extends AppCompatActivity {
+public class IntentAndBundleActivity extends BaseActivity {
+
+    IntentAndBundleBinding binding;
+    final String title = "인텐트 번들 예제";
 
     @Override
-    protected void onCreate(Bundle savedInstanceState) {
+    protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_intent_and_bundle);
+        binding = IntentAndBundleBinding.inflate(getLayoutInflater());
+        View view = binding.getRoot();
+        setContentView(view);
+
+        // Toolbar 세팅
+        setToolbar(binding.layout.toolbar, binding.layout.toolbarImage, binding.layout.tooblarTitle, title);
     }
+
 }

@@ -7,6 +7,10 @@
         android:layout_height="match_parent"
         tools:context="AndroidBasic.AndroidFourComponents.BroadcastReceiver.Broadcast_SMS_Activity">
 
+
+    <!--Custom Toolbar-->
+    <include layout="@layout/toolbar" android:id="@+id/layout"/>
+
     <EditText
             android:id="@+id/editText"
             android:layout_width="wrap_content"
@@ -19,7 +23,8 @@
             android:inputType="textPersonName"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" android:minHeight="48dp"/>
+            app:layout_constraintTop_toBottomOf="@+id/layout"
+            android:minHeight="48dp"/>
 
     <EditText
             android:id="@+id/editText2"

@@ -5,21 +5,17 @@
         xmlns:tools="http://schemas.android.com/tools"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:background="#168BC34A"
         tools:context=".MainActivity">
 
-    <androidx.constraintlayout.widget.Guideline
-            android:orientation="horizontal"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:id="@+id/guideline1"
-            app:layout_constraintGuide_percent="0.7"/>
+    <!--Custom Toolbar-->
+    <include layout="@layout/toolbar" android:id="@+id/layout"/>
+
 
     <ScrollView
             android:layout_width="match_parent"
             android:layout_height="0dp"
             app:layout_constraintBottom_toTopOf="@+id/guideline1"
-            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/layout"
             android:id="@+id/scrollView1">
 
         <LinearLayout
@@ -33,7 +29,6 @@
                     android:layout_height="wrap_content"
                     android:layout_marginStart="20dp"
                     android:layout_marginEnd="20dp"
-                    android:clickable="false"
                     android:ems="10"
                     android:fontFamily="@font/english"
                     android:textColor="@android:color/holo_green_dark"
@@ -41,6 +36,13 @@
                     android:textStyle="bold"/>
         </LinearLayout>
     </ScrollView>
+
+    <androidx.constraintlayout.widget.Guideline
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/guideline1"
+            app:layout_constraintGuide_percent="0.7"/>
 
     <EditText
             android:id="@+id/textName"

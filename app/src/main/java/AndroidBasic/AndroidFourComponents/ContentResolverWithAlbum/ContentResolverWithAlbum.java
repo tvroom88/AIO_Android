@@ -8,18 +8,16 @@ import android.content.pm.PackageManager;
 import android.net.Uri;
 import android.os.Bundle;
 import android.provider.Settings;
-import android.widget.Button;
-import android.widget.ImageView;
 import android.widget.Toast;
 import androidx.activity.result.ActivityResult;
 import androidx.activity.result.ActivityResultCallback;
 import androidx.activity.result.ActivityResultLauncher;
 import androidx.activity.result.contract.ActivityResultContracts;
 import androidx.appcompat.app.AlertDialog;
-import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.app.ActivityCompat;
 import androidx.core.content.ContextCompat;
-import com.example.aio_android.R;
+import com.example.aio_android.BaseActivity;
+import com.example.aio_android.databinding.ContentResolverWithAlbumBinding;
 
 import java.util.ArrayList;
 
@@ -30,17 +28,20 @@ import java.util.ArrayList;
  *      2. Content Resolver부분 추가
  *      3. startActivityForResult아 deprecated. 그래서 ActivityResultLauncher부분 추가
  */
-public class ContentResolverWithAlbum extends AppCompatActivity {
+public class ContentResolverWithAlbum extends BaseActivity {
 
-    ImageView imageView;
     ActivityResultLauncher<Intent> launcher;
+
+    final String title = "Content Resolver 예제1";
+    private ContentResolverWithAlbumBinding binding;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.content_resolver_with_album);
+        binding = ContentResolverWithAlbumBinding.inflate(getLayoutInflater());
+        setContentView(binding.getRoot());
 
-        imageView = findViewById(R.id.imageView);
+        setToolbar(binding.layout.toolbar, binding.layout.toolbarImage, binding.layout.tooblarTitle, title);
 
         // 위험권한을 부여할 권한 지정 - READ_EXTERNAL_STORAGE and WRITE_EXTERNAL_STORAGE
         String[] permissions = {
@@ -72,7 +73,7 @@ public class ContentResolverWithAlbum extends AppCompatActivity {
 //                            }
 
                             // 이 짧은 코드가 위에껄 다 대체 가능. 혹시 몰라서 위에껀 남겨둠.
-                            imageView.setImageURI(uri);
+                            binding.imageView.setImageURI(uri);
                         }
                     }
                 });
@@ -80,8 +81,7 @@ public class ContentResolverWithAlbum extends AppCompatActivity {
         int permissionCheck1 = ContextCompat.checkSelfPermission(this, permissions[0]);
         int permissionCheck2 = ContextCompat.checkSelfPermission(this, permissions[1]);
 
-        Button button = findViewById(R.id.button);
-        button.setOnClickListener(v -> {
+        binding.button.setOnClickListener(v -> {
             if (permissionCheck1 == PackageManager.PERMISSION_DENIED || permissionCheck2 == PackageManager.PERMISSION_DENIED) {
                 //권한 없을때
                 askPermissionAgain();
@@ -130,7 +130,7 @@ public class ContentResolverWithAlbum extends AppCompatActivity {
             String curPermission = permissions[i];
             int permissionCheck = ContextCompat.checkSelfPermission(this, curPermission);
             if (permissionCheck == PackageManager.PERMISSION_GRANTED) {
-                Toast.makeText(this, curPermission + " 권한 있음.", Toast.LENGTH_SHORT).show();
+//                Toast.makeText(this, curPermission + " 권한 있음.", Toast.LENGTH_SHORT).show();
             } else {
                 Toast.makeText(this, curPermission + " 권한 없음.", Toast.LENGTH_SHORT).show();
                 if (ActivityCompat.shouldShowRequestPermissionRationale(this, curPermission)) {

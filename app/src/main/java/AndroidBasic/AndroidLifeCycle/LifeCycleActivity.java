@@ -7,6 +7,7 @@ import androidx.navigation.NavController;
 import androidx.navigation.Navigation;
 import androidx.navigation.ui.AppBarConfiguration;
 import androidx.navigation.ui.NavigationUI;
+import com.example.aio_android.BaseActivity;
 import com.example.aio_android.R;
 import com.example.aio_android.databinding.LifeCycleBinding;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
@@ -16,12 +17,15 @@ import com.google.android.material.bottomnavigation.BottomNavigationView;
  * (1) Log를 이용해 각 생명주기 부분에서 잘되는지 확인
  * (2) 특별히 뷰로 보여줄게 없어서 스크린샷등으로 대체
  */
-public class LifeCycleActivity extends AppCompatActivity {
+//public class LifeCycleActivity extends AppCompatActivity {
+public class LifeCycleActivity extends BaseActivity {
 
     private LifeCycleBinding binding;
 
     //Activity 이름 가져오는 부분
     public static final String TAG = "LifeCycleActivity";
+
+    final String title = "라이프 사이클 예제";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -31,6 +35,9 @@ public class LifeCycleActivity extends AppCompatActivity {
         binding = LifeCycleBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
 
+        // Toolbar 세팅
+        setToolbar(binding.layout.toolbar, binding.layout.toolbarImage, binding.layout.tooblarTitle, title);
+
         BottomNavigationView navView = findViewById(R.id.nav_view);
         // Passing each menu ID as a set of Ids because each
         // menu should be considered as top level destinations.
@@ -38,7 +45,7 @@ public class LifeCycleActivity extends AppCompatActivity {
                 R.id.navigation_home, R.id.navigation_dashboard, R.id.navigation_notifications)
                 .build();
         NavController navController = Navigation.findNavController(this, R.id.nav_host_fragment_life_cycle);
-        NavigationUI.setupActionBarWithNavController(this, navController, appBarConfiguration);
+//        NavigationUI.setupActionBarWithNavController(this, navController, appBarConfiguration);
         NavigationUI.setupWithNavController(binding.navView, navController);
 
         super.onStart();

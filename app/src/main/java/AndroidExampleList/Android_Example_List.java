@@ -5,7 +5,10 @@ import android.os.Bundle;
 import androidx.recyclerview.widget.DividerItemDecoration;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
+import com.example.aio_android.BaseActivity;
 import com.example.aio_android.R;
+import com.example.aio_android.databinding.ActivityMainBinding;
+import com.example.aio_android.databinding.ExampleListBinding;
 
 /**
  * 안드로이드 예제의 전체 리스트를 보여주는 Activity
@@ -18,19 +21,25 @@ import com.example.aio_android.R;
  *
  */
 
-public class Android_Example_List extends AppCompatActivity {
+public class Android_Example_List extends BaseActivity {
 
     RecyclerView mRecyclerView = null;
     Android_Example_List_Adapter mAdapter = null;
+    private ExampleListBinding binding;
+    final String title = "안드로이드 예제 리스트";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.example_list);
+//        setContentView(R.layout.example_list);
 
-        mRecyclerView = findViewById(R.id.android_example_list_recycler1);
+        binding = ExampleListBinding.inflate(getLayoutInflater());
+        setContentView(binding.getRoot());
+
+        setToolbar(binding.layout.toolbar, binding.layout.toolbarImage, binding.layout.tooblarTitle, title);
+
+        mRecyclerView = binding.androidExampleListRecycler1;
         mRecyclerView.addItemDecoration(new DividerItemDecoration(this, DividerItemDecoration.VERTICAL));
-
 
         mAdapter = new Android_Example_List_Adapter();
         mRecyclerView.setAdapter(mAdapter);

@@ -2,6 +2,7 @@ package AndroidExampleModel;
 
 import AndroidBasic.AndroidFourComponents.Four_Components_List;
 import AndroidBasic.AndroidLifeCycle.LifeCycleActivity;
+import AndroidBasic.IntentAndBundle.IntentAndBundleActivity;
 import AndroidBasic.JetPack.Jetpack_List;
 import AndroidExampleList.Android_Example_Item;
 
@@ -45,7 +46,7 @@ public class Android_Lists_Model {
     private final List<Class> class_list = Arrays.asList(
             Four_Components_List.class, //1
             LifeCycleActivity .class, //2
-            Four_Components_List.class, //3
+            IntentAndBundleActivity.class, //3
             Four_Components_List.class, //4
             Four_Components_List.class, //5
             Four_Components_List.class, //6

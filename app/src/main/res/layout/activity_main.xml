@@ -8,6 +8,9 @@
         android:background="#FFFFCC"
         tools:context=".MainActivity">
 
+    <!--Custom Toolbar-->
+    <include layout="@layout/toolbar" android:id="@+id/layout"/>
+
     <androidx.constraintlayout.widget.Guideline
             android:orientation="horizontal"
             android:layout_width="match_parent"

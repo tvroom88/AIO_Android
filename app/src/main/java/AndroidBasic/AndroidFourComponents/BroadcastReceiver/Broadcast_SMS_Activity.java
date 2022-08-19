@@ -1,29 +1,25 @@
 package AndroidBasic.AndroidFourComponents.BroadcastReceiver;
 
 import android.content.Intent;
-import android.widget.Button;
-import android.widget.EditText;
-import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
-import com.example.aio_android.R;
+import com.example.aio_android.BaseActivity;
+import com.example.aio_android.databinding.BroadcastSmsBinding;
 
-public class Broadcast_SMS_Activity extends AppCompatActivity {
+public class Broadcast_SMS_Activity extends BaseActivity {
 
-    EditText editText;
-    EditText editText2;
-    EditText editText3;
+    final String title = "BroadCast Receiver 예제";
+    private BroadcastSmsBinding binding;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.broadcast_sms);
 
-        editText = findViewById(R.id.editText);
-        editText2 = findViewById(R.id.editText2);
-        editText3 = findViewById(R.id.editText3);
+        binding = BroadcastSmsBinding.inflate(getLayoutInflater());
+        setContentView(binding.getRoot());
 
-        Button button = findViewById(R.id.button);
-        button.setOnClickListener(view -> finish());
+        setToolbar(binding.layout.toolbar, binding.layout.toolbarImage, binding.layout.tooblarTitle, title);
+
+        binding.button.setOnClickListener(view -> finish());
 
         Intent passedIntent = getIntent();
         processIntent(passedIntent);
@@ -42,9 +38,9 @@ public class Broadcast_SMS_Activity extends AppCompatActivity {
             String contents = intent.getStringExtra("contents");
             String receivedDate = intent.getStringExtra("receivedDate");
 
-            editText.setText(sender);
-            editText2.setText(contents);
-            editText3.setText(receivedDate);
+            binding.editText.setText(sender);
+            binding.editText2.setText(contents);
+            binding.editText3.setText(receivedDate);
         }
     }
 }

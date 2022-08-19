@@ -2,17 +2,13 @@ package AndroidBasic.AndroidFourComponents.BroadcastReceiver;
 
 import android.Manifest;
 import android.content.Intent;
-import android.telephony.SmsManager;
-import android.view.View;
-import android.widget.Button;
-import android.widget.EditText;
-import android.widget.Toast;
-import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
-import com.example.aio_android.R;
+import android.telephony.SmsManager;
+import android.widget.Toast;
+import com.example.aio_android.BaseActivity;
+import com.example.aio_android.databinding.BroadcastBinding;
 import com.gun0912.tedpermission.PermissionListener;
 import com.gun0912.tedpermission.normal.TedPermission;
-
 import java.util.List;
 
 /**
@@ -21,29 +17,25 @@ import java.util.List;
  *  이 Activity에서는 SMS를 보내는 부분 구현
  *  SMS를 보내면 Broadcast_SMS_Activity가 자동적으로 연결됨
  */
-public class BroadcastActivity extends AppCompatActivity {
+public class BroadcastActivity extends BaseActivity {
 
-    Button buttonSend;
-    Button checkSMSButton;
-    EditText textPhoneNo;
-    EditText textSMS;
+    final String title = "BroadCast Receiver 예제";
+    private BroadcastBinding binding;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.broadcast);
+        binding = BroadcastBinding.inflate(getLayoutInflater());
+        setContentView(binding.getRoot());
 
-
+        setToolbar(binding.layout.toolbar, binding.layout.toolbarImage, binding.layout.tooblarTitle, title);
+        // 권한 허가
         checkPermission();
-        buttonSend = findViewById(R.id.smsSendButton1);
-        checkSMSButton = findViewById(R.id.goSmsActivityButton);
-        textPhoneNo = findViewById(R.id.editTextPhoneNo);
-        textSMS =  findViewById(R.id.editTextSMS);
 
-        buttonSend.setOnClickListener(v -> {
+        binding.smsSendButton1.setOnClickListener(v -> {
             //입력한 값을 가져와 변수에 담는다
-            String phoneNo = textPhoneNo.getText().toString();
-            String sms = textSMS.getText().toString();
+            String phoneNo = binding.editTextPhoneNo.getText().toString();
+            String sms = binding.editTextSMS.getText().toString();
 
             try {
                 //전송
@@ -54,15 +46,13 @@ public class BroadcastActivity extends AppCompatActivity {
                 Toast.makeText(getApplicationContext(), "SMS 실패, please try again later!", Toast.LENGTH_SHORT).show();
                 e.printStackTrace();
             }
-
         });
 
-        checkSMSButton.setOnClickListener(v -> {
+        binding.goSmsActivityButton.setOnClickListener(v -> {
             Intent intent = new Intent(this, Broadcast_SMS_Activity.class);
             startActivity(intent);
         });
     }
-
 
     private void checkPermission(){
         TedPermission.create()
@@ -80,5 +70,4 @@ public class BroadcastActivity extends AppCompatActivity {
                 .setPermissions(Manifest.permission.RECEIVE_SMS, Manifest.permission.SEND_SMS)
                 .check();
     }
-
 }

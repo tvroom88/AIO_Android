@@ -1,20 +1,15 @@
 package AndroidBasic.AndroidFourComponents.Service;
 
-import android.annotation.SuppressLint;
-import android.app.*;
-import android.app.usage.UsageEvents;
-import android.app.usage.UsageStatsManager;
+import android.app.NotificationChannel;
+import android.app.NotificationManager;
+import android.app.PendingIntent;
+import android.app.Service;
 import android.content.Context;
 import android.content.Intent;
-import android.content.pm.PackageManager;
 import android.os.IBinder;
-import android.util.LongSparseArray;
-import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.core.app.NotificationCompat;
 import androidx.core.app.NotificationManagerCompat;
-import com.example.aio_android.BuildConfig;
-import com.example.aio_android.MainActivity;
 import com.example.aio_android.R;
 
 public class ServiceA extends Service {
@@ -47,12 +42,12 @@ public class ServiceA extends Service {
         // No를 누를 경우
         Intent noIntent = new Intent(getApplicationContext(), ServiceActivity.class);
         noIntent.putExtra("flag", 2);
-        PendingIntent noPendingIntent = PendingIntent.getActivity(this, 0, noIntent, PendingIntent.FLAG_MUTABLE);
+        PendingIntent noPendingIntent = PendingIntent.getActivity(this, 0, noIntent, PendingIntent.FLAG_IMMUTABLE);
 
         // Dismiss Button
         Intent buttonIntent = new Intent(getApplicationContext(), AutoDismissReceiver.class);
         buttonIntent.putExtra("flag",3);
-        PendingIntent btPendingIntent = PendingIntent.getBroadcast(this, 0, buttonIntent,PendingIntent.FLAG_MUTABLE);
+        PendingIntent btPendingIntent = PendingIntent.getBroadcast(this, 0, buttonIntent,PendingIntent.FLAG_IMMUTABLE);
 
         // 오래오 윗버젼일 때는 아래와 같이 채널을 만들어 Notification과 연결해야 한다.
         if (android.os.Build.VERSION.SDK_INT >= android.os.Build.VERSION_CODES.O) {
@@ -71,9 +66,8 @@ public class ServiceA extends Service {
                     .setContentText("포어그라운드로 실행중입니다..")
                     .setAutoCancel(true)
                     .addAction(R.drawable.android_example_right, "Yes", yesPendingIntent)
-                    .addAction(R.drawable.android_example_right, "No", noPendingIntent)
-                    .addAction(R.drawable.android_example_right, "Dismiss", btPendingIntent);
-
+                    .addAction(R.drawable.android_example_right, "No", noPendingIntent);
+//                    .addAction(R.drawable.android_example_right, "Dismiss", btPendingIntent);
 
             NotificationManagerCompat notificationManagerCompat = NotificationManagerCompat.from(this);
             // id 값은 0보다 큰 양수가 들어가야 한다.
@@ -90,28 +84,15 @@ public class ServiceA extends Service {
         return START_STICKY;
     }
 
-//    public static PendingIntent getDismissIntent(int notificationId, Context context) {
-//        Intent intent = new Intent(context, );
-//        intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
-//        intent.putExtra(NOTIFICATION_ID, notificationId);
-//        PendingIntent dismissIntent = PendingIntent.getActivity(context, 0, intent, PendingIntent.FLAG_CANCEL_CURRENT);
-//        return dismissIntent;
-//    }
-
-
     private class CheckPackageNameThread extends Thread{
 
         public void run(){
             while(true){
                 // runOnUiThread를 이용해 UI 스레드에 해당 작업을 큐에 넣어 알림의 내용 UI를 변경할 수 있게 해준다.
-//                Activity m = new Activity();
-                MainActivity.mActivity.runOnUiThread(new Runnable() {
-                    @Override
-                    public void run() {
+                ServiceActivity.mActivity.runOnUiThread(() -> {
 //                        notification.setContentText(getPackageName(getApplicationContext()));
-                        notification.setContentText("hi");
-                        mNotificationManager.notify(1, notification.build());
-                    }
+                    notification.setContentText("notification");
+                    mNotificationManager.notify(1, notification.build());
                 });
                 try {
                     sleep(2000);

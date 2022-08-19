@@ -5,29 +5,30 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.widget.LinearLayout;
 import androidx.appcompat.app.AppCompatActivity;
+import com.example.aio_android.databinding.ActivityMainBinding;
+import com.example.aio_android.databinding.LifeCycleBinding;
 
 // 앱의 가장 첫번째 화면
-public class MainActivity extends AppCompatActivity {
+public class MainActivity extends BaseActivity {
 
-    public static MainActivity mActivity;
+    private ActivityMainBinding binding;
+    final String title = "안드로이드 예제 앱";
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
-        setContentView(R.layout.activity_main);
+        binding = ActivityMainBinding.inflate(getLayoutInflater());
+        setContentView(binding.getRoot());
 
-        mActivity = this;
-
-        // Button을 Custom하게 하기위해 LinearLayout으로 만듬.
-        LinearLayout main_activity_button = findViewById(R.id.MainActivityButton1);
+        setToolbar(binding.layout.toolbar, binding.layout.toolbarImage, binding.layout.tooblarTitle, title);
 
         // 첫화면과 안드로이드 예제 리스트와 연결
-        main_activity_button.setOnClickListener(v -> {
+        binding.MainActivityButton1.setOnClickListener(v -> {
             Intent intent = new Intent(this, Android_Example_List.class);
             startActivity(intent);
         });
 
-        // 추후 시간이 될경우 안드로이드 기초 내용도 더 넣을 예정
     }
 }
 

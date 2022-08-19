@@ -7,17 +7,14 @@ import android.database.Cursor;
 import android.net.Uri;
 import android.os.Bundle;
 import android.provider.ContactsContract;
-import android.widget.Button;
-import android.widget.TextView;
 import androidx.activity.result.ActivityResult;
 import androidx.activity.result.ActivityResultCallback;
 import androidx.activity.result.ActivityResultLauncher;
 import androidx.activity.result.contract.ActivityResultContracts;
-import androidx.appcompat.app.AppCompatActivity;
-import com.example.aio_android.R;
+import com.example.aio_android.BaseActivity;
+import com.example.aio_android.databinding.ContentResolverWithPhoneBookBinding;
 import com.gun0912.tedpermission.PermissionListener;
 import com.gun0912.tedpermission.normal.TedPermission;
-
 import java.util.List;
 
 /**
@@ -25,17 +22,21 @@ import java.util.List;
  *   (1) permission 받는 부분 : TedPermission 라이브러리 사용
  */
 
-public class ContentResolverWIthPhoneBook extends AppCompatActivity {
+public class ContentResolverWIthPhoneBook extends BaseActivity {
 
-    TextView textView;
     ActivityResultLauncher<Intent> launcher;
+
+    final String title = "Content Resolver 예제2";
+    private ContentResolverWithPhoneBookBinding binding;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.content_resolver_with_phone_book);
 
-        textView = findViewById(R.id.textView);
+        binding = ContentResolverWithPhoneBookBinding.inflate(getLayoutInflater());
+        setContentView(binding.getRoot());
+
+        setToolbar(binding.layout.toolbar, binding.layout.toolbarImage, binding.layout.tooblarTitle, title);
 
         // startActivityForResult이 deprecated 됨. ActivityResultLauncher 추가함
         launcher = registerForActivityResult(new ActivityResultContracts.StartActivityForResult(),
@@ -55,8 +56,7 @@ public class ContentResolverWIthPhoneBook extends AppCompatActivity {
                     }
                 });
 
-        Button button = findViewById(R.id.button);
-        button.setOnClickListener(v -> {
+        binding.button.setOnClickListener(v -> {
              requestPermission();
         });
     }
@@ -98,13 +98,13 @@ public class ContentResolverWIthPhoneBook extends AppCompatActivity {
 
             if (cursor.moveToFirst()) {
                 name = cursor.getString(cursor.getColumnIndex(ContactsContract.Data.DISPLAY_NAME));
-                textView.append("Name : " + name);
+                binding.textView.append("Name : " + name);
                 // 모든 칼럼 이름 확인
                 String[] columns = cursor.getColumnNames();
                 for (String column : columns) {
                     int index = cursor.getColumnIndex(column);
                     String columnOutput = ("#" + index + " -> [" + column + "] " + cursor.getString(index));
-                    textView.append(columnOutput);
+                    binding.textView.append(columnOutput);
                 }
                 cursor.close();
             }
