@@ -1,6 +1,7 @@
 package AndroidExampleAdapter;
 
 import AndroidExampleList.Android_Example_Item;
+import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
 import android.view.LayoutInflater;
@@ -72,6 +73,7 @@ public class ListView_Type_One_Adapter extends BaseAdapter {
         convertView.setOnClickListener(v -> {
             Intent intent = new Intent(context, android_example_class_list.get(position));
             context.startActivity(intent);
+            ((Activity) context).overridePendingTransition(R.anim.fadein, R.anim.fadeout);
         });
         return convertView;
     }

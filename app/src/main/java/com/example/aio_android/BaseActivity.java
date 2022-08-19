@@ -49,6 +49,8 @@ abstract public class BaseActivity extends AppCompatActivity {
             case R.id.action_menu1:
                 Intent intent = new Intent(this, MainActivity.class);
                 startActivity(intent);
+                ActivityCompat.finishAffinity(this);
+                overridePendingTransition(0, 0);
                 return true;
 
             case R.id.action_menu2:
@@ -58,6 +60,16 @@ abstract public class BaseActivity extends AppCompatActivity {
             default:
                 // 여기에 도달한거는 유저의 action이 아무것도 없을떄 오는 부분
                 return super.onOptionsItemSelected(item);
+        }
+    }
+
+
+    @Override
+    public void onBackPressed() {
+        super.onBackPressed();
+        if (isFinishing()) {
+            // back 버튼으로 화면 종료가 야기되면 동작한다.
+            overridePendingTransition(R.anim.fadeout, R.anim.fadein);
         }
     }
 }
