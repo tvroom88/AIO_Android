@@ -27,6 +27,9 @@ public class MainActivity extends BaseActivity {
         binding.MainActivityButton1.setOnClickListener(v -> {
             Intent intent = new Intent(this, Android_Example_List.class);
             startActivity(intent);
+//            overridePendingTransition(R.anim.horizon_enter, R.anim.horizon_exit);
+            overridePendingTransition(R.anim.fadein, R.anim.fadeout);
+
         });
 
     }

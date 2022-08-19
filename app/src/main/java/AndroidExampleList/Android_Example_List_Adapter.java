@@ -1,6 +1,7 @@
 package AndroidExampleList;
 
 import AndroidExampleModel.Android_Lists_Model;
+import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
 import android.view.LayoutInflater;
@@ -19,6 +20,8 @@ public class Android_Example_List_Adapter extends RecyclerView.Adapter<Android_E
     private final List<Class> android_example_class_list = Android_Lists_Model.getInstance().get_Class_List();
     private int pos = 0;
 
+
+//    Android_Example_List_Adapter
     // onCreateViewHolder : 아이템 뷰를 위한 뷰홀더 객체를 생성하여 리턴
     @NonNull
     @Override
@@ -74,6 +77,7 @@ public class Android_Example_List_Adapter extends RecyclerView.Adapter<Android_E
                 pos = (getAdapterPosition());
                 Intent intent = new Intent(mContext, android_example_class_list.get(pos));
                 mContext.startActivity(intent);
+                ((Activity) mContext).overridePendingTransition(R.anim.fadein, R.anim.fadeout);
             });
         }
     }
