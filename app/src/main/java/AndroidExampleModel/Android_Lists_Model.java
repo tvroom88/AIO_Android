@@ -2,6 +2,7 @@ package AndroidExampleModel;
 
 import AndroidBasic.AndroidFourComponents.Four_Components_List;
 import AndroidBasic.AndroidLifeCycle.LifeCycleActivity;
+import AndroidBasic.Handler.HandlerActivity;
 import AndroidBasic.IntentAndBundle.IntentAndBundleActivity;
 import AndroidBasic.JetPack.Jetpack_List;
 import AndroidExampleList.Android_Example_Item;
@@ -47,7 +48,7 @@ public class Android_Lists_Model {
             Four_Components_List.class, //1
             LifeCycleActivity .class, //2
             IntentAndBundleActivity.class, //3
-            Four_Components_List.class, //4
+            HandlerActivity.class, //4
             Four_Components_List.class, //5
             Four_Components_List.class, //6
             Four_Components_List.class, //7

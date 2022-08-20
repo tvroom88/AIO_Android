@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        tools:context="AndroidBasic.Handler.HandlerActivity">
+
+    <include layout="@layout/toolbar" android:id="@+id/layout"/>
+
+    <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:layout_gravity="center">
+
+        <TextView
+                android:text="Counter 예제"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:textSize="30sp"
+                android:gravity="center"/>
+
+        <TextView
+                android:text=""
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:gravity="center"
+                android:textSize="30sp"
+                android:id="@+id/handlerText1"/>
+        <Button
+                android:text="Counter 시작"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:id="@+id/handlerButton1"
+                android:layout_gravity="center"/>
+
+        <Button
+                android:text="Counter 종료"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:id="@+id/handlerButton2"
+                android:layout_gravity="center"/>
+
+        <Button
+                android:text="Counter 리셋"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:id="@+id/handlerButton3"
+                android:layout_gravity="center"/>
+    </LinearLayout>
+
+    <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            android:layout_gravity="center">
+
+        <TextView
+                android:text="Animation 예제"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_gravity="center"
+                android:textSize="30sp"/>
+        <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:gravity="center"
+                app:srcCompat="@drawable/ic_launcher_foreground"
+                android:id="@+id/handlerImage1"
+                android:layout_marginStart="30dp"
+                android:layout_marginEnd="30dp"
+                android:layout_gravity="center"/>
+
+        <Button
+
+                android:text="Counter 시작"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:id="@+id/handlerButton4"
+                android:layout_gravity="center"/>
+
+        <Button
+                android:text="Counter 종료"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:id="@+id/handlerButton5"
+                android:layout_gravity="center"/>
+
+        <Button
+                android:text="Counter 리셋"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:id="@+id/handlerButton6"
+                android:layout_gravity="center"/>
+
+    </LinearLayout>
+
+
+</LinearLayout>
