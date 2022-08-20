@@ -41,6 +41,7 @@
         <entry key="app/src/main/res/layout/fragment_a.xml" value="0.2821557971014493" />
         <entry key="app/src/main/res/layout/fragment_b.xml" value="0.2821557971014493" />
         <entry key="app/src/main/res/layout/intent_and_bundle.xml" value="0.223731884057971" />
+        <entry key="app/src/main/res/layout/intent_result.xml" value="0.15364583333333334" />
         <entry key="app/src/main/res/layout/jetpack.xml" value="0.15364583333333334" />
         <entry key="app/src/main/res/layout/layout.xml" value="0.2821557971014493" />
         <entry key="app/src/main/res/layout/life_cycle.xml" value="0.1453914774541838" />
