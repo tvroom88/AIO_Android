@@ -1,0 +1,12 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android" >
+    <item
+            android:id="@+id/div_tab1"
+            android:enabled="true"
+            android:icon="@drawable/xml"
+            android:title="xml로 추가"/>
+    <item
+            android:id="@+id/div_tab2"
+            android:enabled="true"
+            android:icon="@drawable/java"
+            android:title="code로 추가"/>
+</menu>

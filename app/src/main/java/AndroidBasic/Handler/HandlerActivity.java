@@ -17,7 +17,7 @@ import java.util.ArrayList;
  * Handler 예제
  * (1) 멀티 스레드 사용
  * (2) Counter 예제 추가
- * (3)
+ * (3) Animation 예제 추가 
  */
 public class HandlerActivity extends BaseActivity {
 

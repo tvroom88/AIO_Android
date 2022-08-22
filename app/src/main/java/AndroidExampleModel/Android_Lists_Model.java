@@ -2,6 +2,7 @@ package AndroidExampleModel;
 
 import AndroidBasic.AndroidFourComponents.Four_Components_List;
 import AndroidBasic.AndroidLifeCycle.LifeCycleActivity;
+import AndroidBasic.DiverseLayout.DiverseLayoutActivity;
 import AndroidBasic.Handler.HandlerActivity;
 import AndroidBasic.IntentAndBundle.IntentAndBundleActivity;
 import AndroidBasic.JetPack.Jetpack_List;
@@ -33,10 +34,17 @@ public class Android_Lists_Model {
             new Android_Example_Item(2, "안드로이드, 프래그먼트 라이프 사이클", true),
             new Android_Example_Item(3, "인텐트와 번들", true),
             new Android_Example_Item(4, "핸들러", true),
-            new Android_Example_Item(5, "컨텍스트", true),
-            new Android_Example_Item(6, "디자인패턴", true),
-            new Android_Example_Item(7, "리스트뷰, 리사이클러뷰", true),
-            new Android_Example_Item(8, "JetPack", false)
+            new Android_Example_Item(5, "다양한 레이아웃", true)
+//            new Android_Example_Item(6, "네트워트 통신", true),
+//            new Android_Example_Item(6, "데이터베이스", true),
+//            new Android_Example_Item(7, "리스트뷰, 리사이클러뷰", true),
+//            new Android_Example_Item(8, "디자인패턴", true),
+//            new Android_Example_Item(9, "JetPack", false),
+//            new Android_Example_Item(9, "뷰 그래픽", false),
+//            new Android_Example_Item(9, "멀티미디어 다루기", false),
+//            new Android_Example_Item(9, "외부 데이터베이스와 연동", false),
+//            new Android_Example_Item(9, "위치 기반 서비스", false),
+//            new Android_Example_Item(9, "푸시와 센서 기능 이용하기", false)
     );
 
     public List<Android_Example_Item> getAndroid_example_code_list() {
@@ -49,10 +57,11 @@ public class Android_Lists_Model {
             LifeCycleActivity .class, //2
             IntentAndBundleActivity.class, //3
             HandlerActivity.class, //4
-            Four_Components_List.class, //5
-            Four_Components_List.class, //6
-            Four_Components_List.class, //7
-            Jetpack_List.class //8
+            DiverseLayoutActivity.class //5
+//            Four_Components_List.class, //5
+//            Four_Components_List.class, //6
+//            Four_Components_List.class, //7
+//            Jetpack_List.class //8
     );
 
     public List<Class> get_Class_List() {
