@@ -23,6 +23,15 @@
             android:supportsRtl="true"
             android:theme="@style/Theme.AIO_Android">
         <activity
+                android:name="AndroidBasic.DataBase.RoomDataBase.RoomDBActivity"
+                android:exported="true"/>
+        <activity
+                android:name="AndroidBasic.DataBase.SQLiteDataBase.SQLiteActivity"
+                android:exported="true"/>
+        <activity
+                android:name="AndroidBasic.DataBase.DataBase_List"
+                android:exported="true"/>
+        <activity
                 android:name="AndroidBasic.DiverseLayout.DiverseLayoutActivity"
                 android:exported="true"/>
         <activity

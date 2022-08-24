@@ -2,6 +2,7 @@ package AndroidExampleModel;
 
 import AndroidBasic.AndroidFourComponents.Four_Components_List;
 import AndroidBasic.AndroidLifeCycle.LifeCycleActivity;
+import AndroidBasic.DataBase.DataBase_List;
 import AndroidBasic.DiverseLayout.DiverseLayoutActivity;
 import AndroidBasic.Handler.HandlerActivity;
 import AndroidBasic.IntentAndBundle.IntentAndBundleActivity;
@@ -34,9 +35,10 @@ public class Android_Lists_Model {
             new Android_Example_Item(2, "안드로이드, 프래그먼트 라이프 사이클", true),
             new Android_Example_Item(3, "인텐트와 번들", true),
             new Android_Example_Item(4, "핸들러", true),
-            new Android_Example_Item(5, "다양한 레이아웃", true)
+            new Android_Example_Item(5, "다양한 레이아웃", true),
+               new Android_Example_Item(6, "데이터베이스", false)
 //            new Android_Example_Item(6, "네트워트 통신", true),
-//            new Android_Example_Item(6, "데이터베이스", true),
+//
 //            new Android_Example_Item(7, "리스트뷰, 리사이클러뷰", true),
 //            new Android_Example_Item(8, "디자인패턴", true),
 //            new Android_Example_Item(9, "JetPack", false),
@@ -57,8 +59,8 @@ public class Android_Lists_Model {
             LifeCycleActivity .class, //2
             IntentAndBundleActivity.class, //3
             HandlerActivity.class, //4
-            DiverseLayoutActivity.class //5
-//            Four_Components_List.class, //5
+            DiverseLayoutActivity.class, //5
+            DataBase_List.class //6
 //            Four_Components_List.class, //6
 //            Four_Components_List.class, //7
 //            Jetpack_List.class //8

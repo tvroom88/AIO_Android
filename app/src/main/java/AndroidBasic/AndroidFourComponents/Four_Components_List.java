@@ -28,9 +28,10 @@ public class Four_Components_List extends BaseActivity {
                 FourComponent_Model.getInstance().get_Four_Component_Class_List()
         );
 
-        setToolbar(binding.layout.toolbar, binding.layout.toolbarImage, binding.layout.tooblarTitle, title);
-
         binding.listView1.setAdapter(adapter);
         adapter.notifyDataSetChanged();
+
+        setToolbar(binding.layout.toolbar, binding.layout.toolbarImage, binding.layout.tooblarTitle, title);
+
     }
 }

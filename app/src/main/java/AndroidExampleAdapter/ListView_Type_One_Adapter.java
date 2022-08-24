@@ -11,8 +11,6 @@ import android.widget.BaseAdapter;
 import android.widget.ImageView;
 import android.widget.TextView;
 import com.example.aio_android.R;
-
-
 import java.util.List;
 
 public class ListView_Type_One_Adapter extends BaseAdapter {

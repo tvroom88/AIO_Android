@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="major">
+        <item>컴퓨터 공학1</item>
+        <item>컴퓨터 공학2</item>
+        <item>컴퓨터 공학3</item>
+        <item>컴퓨터 공학4</item>
+    </string-array>
+</resources>
