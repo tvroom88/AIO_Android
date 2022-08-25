@@ -33,6 +33,7 @@
         <entry key="app/src/main/res/layout/android_four_components_list.xml" value="0.15260416666666668" />
         <entry key="app/src/main/res/layout/broadcast.xml" value="0.1" />
         <entry key="app/src/main/res/layout/broadcast_sms.xml" value="0.22826086956521738" />
+        <entry key="app/src/main/res/layout/content_okhttp3.xml" value="0.14947916666666666" />
         <entry key="app/src/main/res/layout/content_provider.xml" value="0.18548479312633806" />
         <entry key="app/src/main/res/layout/content_resolver_with_album.xml" value="0.22826086956521738" />
         <entry key="app/src/main/res/layout/content_resolver_with_phone_book.xml" value="0.22192028985507245" />
@@ -57,6 +58,11 @@
         <entry key="app/src/main/res/layout/lifecycle_fragment_a.xml" value="0.1" />
         <entry key="app/src/main/res/layout/lifecycle_fragment_b.xml" value="0.22826086956521738" />
         <entry key="app/src/main/res/layout/lifecycle_fragment_c.xml" value="0.17708333333333334" />
+        <entry key="app/src/main/res/layout/network_http_urlconnection.xml" value="0.15052083333333333" />
+        <entry key="app/src/main/res/layout/network_list.xml" value="0.15052083333333333" />
+        <entry key="app/src/main/res/layout/network_okhttp3.xml" value="0.14947916666666666" />
+        <entry key="app/src/main/res/layout/network_retrofit.xml" value="0.14947916666666666" />
+        <entry key="app/src/main/res/layout/okhttp3.xml" value="0.14947916666666666" />
         <entry key="app/src/main/res/layout/service.xml" value="0.2639036337474074" />
         <entry key="app/src/main/res/layout/toolbar.xml" value="0.223731884057971" />
         <entry key="app/src/main/res/menu/bottom_nav_menu.xml" value="0.19166666666666668" />
