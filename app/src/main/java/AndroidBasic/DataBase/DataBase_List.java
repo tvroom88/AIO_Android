@@ -15,7 +15,6 @@ public class DataBase_List extends BaseActivity {
     private DataBaseListBinding binding;
     final String title = "데이터베이스 예제 리스트";
 
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -34,6 +33,5 @@ public class DataBase_List extends BaseActivity {
         setToolbar(binding.layout.toolbar, binding.layout.toolbarImage, binding.layout.tooblarTitle, title);
 
     }
-
 
 }
