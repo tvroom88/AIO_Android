@@ -1,6 +1,7 @@
 package AndroidExampleModel;
 
 import AndroidBasic.AndroidFourComponents.ActivityAndFragment.Activity_And_Fragment;
+import AndroidBasic.AndroidFourComponents.BottomNavigationFragmentView.BottomNavigationFragmentActivity;
 import AndroidBasic.AndroidFourComponents.BroadcastReceiver.BroadcastActivity;
 import AndroidBasic.AndroidFourComponents.BroadcastReceiver.Broadcast_SMS_Activity;
 import AndroidBasic.AndroidFourComponents.ContentProvider.ContentProviderActivity;
@@ -28,11 +29,12 @@ public class FourComponent_Model {
     //전체적 구성이 RecyclerView의 Item과 똑같아서 그대로 재활용
     private final List<Android_Example_Item> android_four_component_list = Arrays.asList(
             new Android_Example_Item(1, "Activity and Fragment", true),
-            new Android_Example_Item(2, "Service", true),
-            new Android_Example_Item(3, "Content provider", true),
-            new Android_Example_Item(4, "Content receiver with Album", true),
-            new Android_Example_Item(5, "Content receiver with Phone book", true),
-            new Android_Example_Item(6, "Broadcast receiver", true)
+            new Android_Example_Item(2, "BottomNavigation and Fragment", true),
+            new Android_Example_Item(3, "Service", true),
+            new Android_Example_Item(4, "Content provider", true),
+            new Android_Example_Item(5, "Content receiver with Album", true),
+            new Android_Example_Item(6, "Content receiver with Phone book", true),
+            new Android_Example_Item(7, "Broadcast receiver", true)
     );
 
     public List<Android_Example_Item> getAndroid_four_component_list() {
@@ -43,11 +45,12 @@ public class FourComponent_Model {
     //안드로이드 four component class List
     private final List<Class> four_component_class_list = Arrays.asList(
             Activity_And_Fragment.class,        //1
-            ServiceActivity.class,              //2
-            ContentProviderActivity.class,      //3
-            ContentResolverWithAlbum.class,     //4
-            ContentResolverWIthPhoneBook.class, //5
-            BroadcastActivity.class             //6
+            BottomNavigationFragmentActivity.class,              //2
+            ServiceActivity.class,              //3
+            ContentProviderActivity.class,      //4
+            ContentResolverWithAlbum.class,     //5
+            ContentResolverWIthPhoneBook.class, //6
+            BroadcastActivity.class             //7
     );
 
     //Getter method for 안드로이드 four component class List

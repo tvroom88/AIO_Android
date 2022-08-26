@@ -1,15 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
-<menu xmlns:android="http://schemas.android.com/apk/res/android">
+<menu xmlns:android="http://schemas.android.com/apk/res/android" >
     <item
-            android:id="@+id/navigation_home"
-            android:icon="@drawable/one_icon"
-            android:title="Activity LifeCycle"/>
+            android:id="@+id/div_tab1"
+            android:enabled="true"
+            android:icon="@drawable/aa_icon"
+            android:title="FragmentA"/>
     <item
-            android:id="@+id/navigation_dashboard"
-            android:icon="@drawable/two_icon"
-            android:title="Fragment LifeCycle"/>
-    <item
-            android:id="@+id/navigation_notifications"
-            android:icon="@drawable/three_icon"
-            android:title="Activity's' LifeCycle"/>
+            android:id="@+id/div_tab2"
+            android:enabled="true"
+            android:icon="@drawable/ab_icon"
+            android:title="FragmentB"/>
 </menu>

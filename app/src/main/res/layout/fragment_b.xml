@@ -10,6 +10,7 @@
             android:layout_height="match_parent">
 
         <TextView
+                android:id="@+id/fragmentB_text"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="여기는 FragmentB 영역입니다.\n프로그래밍 방식으로 구현한 fragment"
