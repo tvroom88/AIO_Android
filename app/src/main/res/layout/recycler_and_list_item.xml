@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:app="http://schemas.android.com/apk/res-auto"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content" android:orientation="horizontal"
+              android:padding="10dp">
+
+<!--    id -->
+    <TextView
+            android:text="id : "
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:fontFamily="@font/korean"/>
+
+    <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/recycler_id"
+            android:fontFamily="@font/korean"/>
+
+<!--    name -->
+    <TextView
+            android:text="이름 : "
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:textSize="15dp"
+            android:fontFamily="@font/korean"/>
+
+    <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/recycler_name"
+            android:textSize="15dp"
+            android:fontFamily="@font/korean"/>
+
+<!--   age -->
+    <TextView
+            android:text="나이 : "
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:textSize="15dp"
+            android:fontFamily="@font/korean"/>
+
+    <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/recycler_age"
+            android:textSize="15dp"
+            android:fontFamily="@font/korean"/>
+
+</LinearLayout>
