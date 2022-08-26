@@ -1,17 +1,17 @@
 package AndroidBasic.RecyclerAndListView;
 
-import AndroidBasic.DiverseLayout.LayoutFragmentA;
-import AndroidBasic.DiverseLayout.LayoutFragmentB;
-import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
 import com.example.aio_android.BaseActivity;
 import com.example.aio_android.R;
 import com.example.aio_android.databinding.RecyclerAndListBinding;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 
-import java.util.ArrayList;
-import java.util.List;
-
+/**
+ * RecyclerView and ListView 예제.
+ * (1) RecyclerView 와 1000 Student 객체 추가
+ * (2) ListView 와 1000 Student 객체 추가
+ * RecyclerView와 ListView의 성능 차이 확인 가능
+ */
 public class RecyclerAndListActivity extends BaseActivity {
 
     private RecyclerAndListBinding binding;
