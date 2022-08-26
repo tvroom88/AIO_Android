@@ -7,6 +7,7 @@ import AndroidBasic.DiverseLayout.DiverseLayoutActivity;
 import AndroidBasic.Handler.HandlerActivity;
 import AndroidBasic.IntentAndBundle.IntentAndBundleActivity;
 import AndroidBasic.JetPack.Jetpack_List;
+import AndroidBasic.JsonData.JsonData_Activity;
 import AndroidBasic.Network.Network_List;
 import AndroidExampleList.Android_Example_Item;
 
@@ -38,7 +39,8 @@ public class Android_Lists_Model {
             new Android_Example_Item(4, "핸들러", true),
             new Android_Example_Item(5, "다양한 레이아웃", true),
             new Android_Example_Item(6, "데이터베이스", false),
-            new Android_Example_Item(7, "네트워트 통신", true)
+            new Android_Example_Item(7, "Json 데이터 처리", true),
+            new Android_Example_Item(8, "네트워트 통신", false)
 //
 //            new Android_Example_Item(7, "리스트뷰, 리사이클러뷰", true),
 //            new Android_Example_Item(8, "디자인패턴", true),
@@ -62,7 +64,8 @@ public class Android_Lists_Model {
             HandlerActivity.class, //4
             DiverseLayoutActivity.class, //5
             DataBase_List.class, //6
-            Network_List.class  //7
+            JsonData_Activity.class, //7
+            Network_List.class  //8
 //            Four_Components_List.class, //7
 //            Jetpack_List.class //8
     );

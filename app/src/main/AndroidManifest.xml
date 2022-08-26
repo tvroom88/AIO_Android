@@ -14,10 +14,8 @@
     <uses-permission android:name="android.permission.WRITE_CONTACTS"/> <!-- Broadcast_SMS_Activity 예제 : SMS 받는 부분 -->
     <uses-permission android:name="android.permission.RECEIVE_SMS"/>
     <uses-permission android:name="android.permission.SEND_SMS"/> <!-- 네트워크 통신을 위한 permission -->
-    <uses-permission android:name="android.permission.INTERNET"/>
-
-    <!--  인터넷 연결상태 체크  -->
-    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.INTERNET"/> <!-- 인터넷 연결상태 체크 -->
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
 
     <application
             android:allowBackup="true"
@@ -26,6 +24,9 @@
             android:roundIcon="@mipmap/ic_launcher_round"
             android:supportsRtl="true"
             android:theme="@style/Theme.AIO_Android">
+        <activity
+                android:name="AndroidBasic.JsonData.JsonData_Activity"
+                android:exported="true"/>
         <activity
                 android:name="AndroidBasic.Network.Retrofit2.Retrofit2_Activity"
                 android:exported="true"/>
