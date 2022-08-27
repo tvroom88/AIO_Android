@@ -3,10 +3,7 @@ package com.example.aio_android;
 import AndroidExampleList.Android_Example_List;
 import android.content.Intent;
 import android.os.Bundle;
-import android.widget.LinearLayout;
-import androidx.appcompat.app.AppCompatActivity;
 import com.example.aio_android.databinding.ActivityMainBinding;
-import com.example.aio_android.databinding.LifeCycleBinding;
 
 // 앱의 가장 첫번째 화면
 public class MainActivity extends BaseActivity {

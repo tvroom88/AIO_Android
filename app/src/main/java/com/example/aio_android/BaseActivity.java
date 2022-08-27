@@ -30,7 +30,8 @@ abstract public class BaseActivity extends AppCompatActivity {
         Objects.requireNonNull(getSupportActionBar()).setDisplayShowTitleEnabled(false);
 
         // 뒤로가기 버튼
-        imageView.setOnClickListener(v -> finish());
+//        imageView.setOnClickListener(v -> finish());
+        imageView.setOnClickListener(v -> onBackPressed());
 
         // Title 제목 세팅
         titleView.setText(title);
