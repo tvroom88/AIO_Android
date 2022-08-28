@@ -6,6 +6,7 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.ImageView;
 import android.widget.TextView;
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 import androidx.core.app.ActivityCompat;
@@ -19,12 +20,7 @@ import java.util.Objects;
  */
 abstract public class BaseActivity extends AppCompatActivity {
 
-//    private Toolbar toolbar;
-//    private TextView titleview;
-
     protected void setToolbar(Toolbar toolbar, ImageView imageView, TextView titleView, String title){
-//        this.toolbar = toolbar;
-
         // Toolbar 세팅
         setSupportActionBar(toolbar);
         Objects.requireNonNull(getSupportActionBar()).setDisplayShowTitleEnabled(false);
@@ -63,7 +59,6 @@ abstract public class BaseActivity extends AppCompatActivity {
                 return super.onOptionsItemSelected(item);
         }
     }
-
 
     @Override
     public void onBackPressed() {

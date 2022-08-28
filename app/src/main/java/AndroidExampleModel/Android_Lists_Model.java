@@ -73,5 +73,6 @@ public class Android_Lists_Model {
         return this.class_list;
     }
 
-    
+
+
 }
