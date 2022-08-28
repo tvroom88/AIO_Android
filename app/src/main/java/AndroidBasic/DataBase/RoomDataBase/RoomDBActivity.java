@@ -15,6 +15,7 @@ import java.util.List;
  * (2) DAO (StudentDao) : 데이터베이스 접근에 사용되는 추상 메소드들을 포함합니다.
  * (3) Database : RoomDatabase를 확장하는 추상클래스여야 한다. 주석 내에 DB와 연결된 Entity의 목록을 포함해야 한다.
  *
+ * onDestory에 db내용 다 지워버리게 저장함
  */
 public class RoomDBActivity extends BaseActivity {
 
@@ -29,6 +30,8 @@ public class RoomDBActivity extends BaseActivity {
 
     Handler handler = new Handler(Looper.getMainLooper());
 
+    InsertRunnable insertRunnable;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -40,7 +43,12 @@ public class RoomDBActivity extends BaseActivity {
 
         studentDB = StudentDB.getInstance(this);
 
-        InsertRunnable insertRunnable = new InsertRunnable();
+//        InsertRunnable insertRunnable = new InsertRunnable();
+        insertRunnable = new InsertRunnable();
+
+        // 처음 시작할때 기존에 있던 데이터 삭제
+//        flag = 5;
+//        Thread t = new Thread(insertRunnable);
 
         binding.insertBtn.setOnClickListener(v -> {
             flag = 1;
@@ -70,6 +78,7 @@ public class RoomDBActivity extends BaseActivity {
         });
     }
 
+    // 1 insert, 2 delete 3 update 4 load
     class InsertRunnable implements Runnable {
         @Override
         public void run() {
@@ -83,6 +92,8 @@ public class RoomDBActivity extends BaseActivity {
                 sb  = upDate();
             } else if (flag == 4) {
                 sb = loadData();
+            } else if(flag == 5) {
+                deleteAll();
             }
             StringBuffer finalSb = sb;
             handler.post(() -> binding.dbResText.setText(finalSb.toString()));
@@ -91,10 +102,20 @@ public class RoomDBActivity extends BaseActivity {
 
     @Override
     protected void onDestroy() {
+
+        callThread(5);
+
         super.onDestroy();
         StudentDB.destroyInstance();
         studentDB = null;
     }
+
+    public void callThread(int flag){
+        this.flag = flag;
+        Thread t = new Thread(insertRunnable);
+        t.start();
+    }
+
 
     public void insertData() {
         String name = binding.dbNameEdit.getText().toString();
@@ -110,6 +131,10 @@ public class RoomDBActivity extends BaseActivity {
     public void delete(){
         String name = binding.dbNameEdit.getText().toString();
         studentDB.studentDao().deleteByName(name);
+    }
+
+    public void deleteAll(){
+        studentDB.studentDao().deleteAll();
     }
 
     public StringBuffer upDate(){

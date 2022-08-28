@@ -11,6 +11,7 @@ import com.example.aio_android.databinding.DatabaseSqliteBinding;
  * (2) SQLiteActivity - SQLite 데이터베이스를 불러와서 사용.
  *
  * Student에서 major 부분은 spinner로 구현함
+ * onDestory에 db내용 다 지워버리게 저장함
  */
 public class SQLiteActivity extends BaseActivity {
 
@@ -94,6 +95,7 @@ public class SQLiteActivity extends BaseActivity {
 
     @Override
     protected void onDestroy() {
+        dbHelper.deleteAll();
         dbHelper.close();
         super.onDestroy();
     }

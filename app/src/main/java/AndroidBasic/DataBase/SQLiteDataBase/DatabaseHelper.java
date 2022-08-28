@@ -56,6 +56,12 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         return i;
     }
 
+    public void deleteAll(){
+        SQLiteDatabase db = this.getWritableDatabase();
+//        db.execSQL("delete from "+ TABLE_NAME);
+        db.delete(TABLE_NAME, null, null);
+    }
+
     public int update(String name, int age, String major) {
         SQLiteDatabase db = this.getWritableDatabase();
         ContentValues contentValue = new ContentValues();

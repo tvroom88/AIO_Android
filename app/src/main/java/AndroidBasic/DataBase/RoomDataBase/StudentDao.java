@@ -22,6 +22,10 @@ public interface StudentDao {
     void deleteByName(String SName);
 
 
+    @Query ("DELETE FROM student")
+    void deleteAll();
+
+
     @Query("SELECT * FROM student WHERE Sname = :SName")
     List<Student> getDataByName(String SName);
 
