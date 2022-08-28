@@ -32,8 +32,8 @@ public class FourComponent_Model {
             new Android_Example_Item(2, "BottomNavigation and Fragment", true),
             new Android_Example_Item(3, "Service", true),
             new Android_Example_Item(4, "Content provider", true),
-            new Android_Example_Item(5, "Content receiver with Album", true),
-            new Android_Example_Item(6, "Content receiver with Phone book", true),
+            new Android_Example_Item(5, "Content resolver with Album", true),
+            new Android_Example_Item(6, "Content resolver with Phone book", true),
             new Android_Example_Item(7, "Broadcast receiver", true)
     );
 
