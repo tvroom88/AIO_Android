@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <group
+            android:id="@+id/group1"
+            android:checkableBehavior="single">
+        <item
+                android:id="@+id/div_tab1"
+                android:enabled="true"
+                android:icon="@drawable/chick"
+                android:title="기초"/>
+        <item
+                android:id="@+id/div_tab2"
+                android:enabled="true"
+                android:icon="@drawable/chicken"
+                android:title="심화"/>
+    </group>
+
+    <group
+            android:id="@+id/group2"
+            android:checkableBehavior="single">
+        <item
+                android:id="@+id/div_tab3"
+                android:enabled="true"
+                android:icon="@drawable/question_icon"
+                android:title="도움말"/>
+        <item
+                android:id="@+id/div_tab4"
+                android:enabled="true"
+                android:icon="@drawable/information_icon"
+                android:title="정보"/>
+    </group>
+
+</menu>

@@ -16,4 +16,5 @@
     <string name="title_dashboard">Dashboard</string>
     <string name="title_notifications">Notifications</string>
     <string name="title_activity_okhttp3">Okhttp3_Activity</string>
+    <string name="title_activity_custom_dialog">CustomDialog</string>
 </resources>

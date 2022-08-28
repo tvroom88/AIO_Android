@@ -7,13 +7,21 @@
         <entry key="app/src/main/res/drawable-v24/ic_launcher_foreground.xml" value="0.32916666666666666" />
         <entry key="app/src/main/res/drawable/book.xml" value="0.153125" />
         <entry key="app/src/main/res/drawable/book_background.xml" value="0.32916666666666666" />
+        <entry key="app/src/main/res/drawable/cancel_icon.xml" value="0.23333333333333334" />
+        <entry key="app/src/main/res/drawable/ic__042837_question_mark_circle_icon.xml" value="0.22291666666666668" />
+        <entry key="app/src/main/res/drawable/ic__118377_three_line_horizontal_icon.xml" value="0.22291666666666668" />
+        <entry key="app/src/main/res/drawable/ic__666595_x_icon.xml" value="0.23333333333333334" />
         <entry key="app/src/main/res/drawable/ic_book.xml" value="0.16875" />
+        <entry key="app/src/main/res/drawable/ic_dashboard_black_24dp.xml" value="0.23333333333333334" />
         <entry key="app/src/main/res/drawable/ic_launcher_background.xml" value="0.32916666666666666" />
+        <entry key="app/src/main/res/drawable/information_icon.xml" value="0.22291666666666668" />
         <entry key="app/src/main/res/drawable/one_icon.xml" value="0.32916666666666666" />
+        <entry key="app/src/main/res/drawable/question_mark_icon.xml" value="0.22291666666666668" />
         <entry key="app/src/main/res/drawable/rectangle_border.xml" value="0.16770833333333332" />
         <entry key="app/src/main/res/drawable/round_border.xml" value="0.16395058250783404" />
         <entry key="app/src/main/res/drawable/square.xml" value="0.221875" />
         <entry key="app/src/main/res/drawable/three_icon.xml" value="0.3302083333333333" />
+        <entry key="app/src/main/res/drawable/three_line.xml" value="0.221875" />
         <entry key="app/src/main/res/drawable/two_icon.xml" value="0.3302083333333333" />
         <entry key="app/src/main/res/font-v26/english.xml" value="0.165625" />
         <entry key="app/src/main/res/font-v26/korean.xml" value="0.165625" />
@@ -35,10 +43,12 @@
         <entry key="app/src/main/res/layout/bottom_navigation_fragment.xml" value="0.13958333333333334" />
         <entry key="app/src/main/res/layout/broadcast.xml" value="0.1" />
         <entry key="app/src/main/res/layout/broadcast_sms.xml" value="0.22826086956521738" />
+        <entry key="app/src/main/res/layout/content_custom_dialog.xml" value="0.3328115579951128" />
         <entry key="app/src/main/res/layout/content_okhttp3.xml" value="0.14947916666666666" />
         <entry key="app/src/main/res/layout/content_provider.xml" value="0.18548479312633806" />
         <entry key="app/src/main/res/layout/content_resolver_with_album.xml" value="0.22826086956521738" />
         <entry key="app/src/main/res/layout/content_resolver_with_phone_book.xml" value="0.22192028985507245" />
+        <entry key="app/src/main/res/layout/custom_dialog.xml" value="0.358098245819249" />
         <entry key="app/src/main/res/layout/data_and_view_binding.xml" value="0.1546875" />
         <entry key="app/src/main/res/layout/data_base_list.xml" value="0.15416666666666667" />
         <entry key="app/src/main/res/layout/database_room.xml" value="0.18958333333333333" />
@@ -65,6 +75,7 @@
         <entry key="app/src/main/res/layout/lifecycle_fragment_a.xml" value="0.1" />
         <entry key="app/src/main/res/layout/lifecycle_fragment_b.xml" value="0.22826086956521738" />
         <entry key="app/src/main/res/layout/lifecycle_fragment_c.xml" value="0.17708333333333334" />
+        <entry key="app/src/main/res/layout/mvp_easy_example.xml" value="0.19927536231884058" />
         <entry key="app/src/main/res/layout/network_http_urlconnection.xml" value="0.15052083333333333" />
         <entry key="app/src/main/res/layout/network_list.xml" value="0.15052083333333333" />
         <entry key="app/src/main/res/layout/network_okhttp3.xml" value="0.14947916666666666" />
@@ -74,10 +85,13 @@
         <entry key="app/src/main/res/layout/recycler_and_list_item.xml" value="0.1" />
         <entry key="app/src/main/res/layout/service.xml" value="0.2639036337474074" />
         <entry key="app/src/main/res/layout/toolbar.xml" value="0.223731884057971" />
+        <entry key="app/src/main/res/layout/toolbar_for_main.xml" value="0.1515625" />
+        <entry key="app/src/main/res/layout/toolbar_navi_header.xml" value="0.19927536231884058" />
         <entry key="app/src/main/res/menu/bottom_nav_menu.xml" value="0.19166666666666668" />
         <entry key="app/src/main/res/menu/divlayout_nav_menu.xml" value="0.27760416666666665" />
         <entry key="app/src/main/res/menu/lifecycle_menu.xml" value="0.16822916666666668" />
         <entry key="app/src/main/res/menu/mymenu.xml" value="0.3307291666666667" />
+        <entry key="app/src/main/res/menu/nav_menu_for_main.xml" value="0.2203125" />
         <entry key="app/src/main/res/menu/recycler_list_view_menu.xml" value="0.2203125" />
         <entry key="app/src/main/res/mipmap-anydpi-v26/book.xml" value="0.32916666666666666" />
         <entry key="app/src/main/res/mipmap-anydpi-v26/book_round.xml" value="0.32916666666666666" />

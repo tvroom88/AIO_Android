@@ -25,6 +25,9 @@
             android:supportsRtl="true"
             android:theme="@style/Theme.AIO_Android">
         <activity
+                android:name=".CustomDialog"
+                android:exported="true"/>
+        <activity
                 android:name="AndroidBasic.AndroidFourComponents.BottomNavigationFragmentView.BottomNavigationFragmentActivity"
                 android:exported="true"/>
         <activity
