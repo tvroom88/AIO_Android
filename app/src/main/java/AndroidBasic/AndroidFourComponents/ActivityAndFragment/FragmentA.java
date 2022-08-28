@@ -13,8 +13,9 @@ public class FragmentA extends Fragment {
     String text;
 
     public FragmentA(){
-
+        this.text = null;
     }
+
     public FragmentA(String text){
         this.text = text;
     }
@@ -26,7 +27,8 @@ public class FragmentA extends Fragment {
         binding = FragmentABinding.inflate(inflater, container, false);
         View root = binding.getRoot();
 
-        binding.fragmentAText.setText(text);
+        if(text != null)
+            binding.fragmentAText.setText(text);
 
         return root;
 

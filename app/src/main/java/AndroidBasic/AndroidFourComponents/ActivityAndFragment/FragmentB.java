@@ -13,11 +13,12 @@ import com.example.aio_android.databinding.FragmentBBinding;
 public class FragmentB extends Fragment {
 
     private FragmentBBinding binding;
+
     String text;
-
     public FragmentB(){
-
+        this.text = null;
     }
+
     public FragmentB(String text){
        this.text = text;
     }
@@ -29,7 +30,8 @@ public class FragmentB extends Fragment {
         binding = FragmentBBinding.inflate(inflater, container, false);
         View root = binding.getRoot();
 
-        binding.fragmentBText.setText(text);
+        if(text != null)
+            binding.fragmentBText.setText(text);
         return root;
     }
 }
