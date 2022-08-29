@@ -7,6 +7,6 @@
     <item
             android:id="@+id/div_tab2"
             android:enabled="true"
-            android:icon="@drawable/java"
+            android:icon="@drawable/java1"
             android:title="code로 추가"/>
 </menu>

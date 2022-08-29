@@ -24,11 +24,17 @@ android {
         viewBinding {
             enabled = true
         }
+
+        lintOptions {
+            checkReleaseBuilds false
+            abortOnError false
+        }
     }
 
     buildTypes {
         release {
             minifyEnabled false
+            crunchPngs false
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
         }
     }
@@ -51,8 +57,8 @@ dependencies {
     implementation 'androidx.legacy:legacy-support-v4:1.0.0'
     implementation 'androidx.lifecycle:lifecycle-livedata-ktx:2.5.1'
     implementation 'androidx.lifecycle:lifecycle-viewmodel-ktx:2.5.1'
-    testImplementation 'junit:junit:'
-    androidTestImplementation 'androidx.test.ext:junit:1.1.3'
+//    testImplementation 'junit:junit:'
+    androidTestImplementation 'androi dx.test.ext:junit:1.1.3'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.4.0'
 
     // permission 라이브러리
@@ -69,4 +75,6 @@ dependencies {
     implementation 'com.squareup.retrofit2:converter-gson:2.6.2'
     implementation 'com.squareup.retrofit2:retrofit:2.6.2'
 
+
+//    implementation 'androidx.core:core-ktx:1.6.0'
 }
