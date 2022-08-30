@@ -1,7 +1,6 @@
 package AndroidExampleModel;
 
 import com.example.aio_android.BuildConfig;
-
 import java.util.Arrays;
 import java.util.List;
 

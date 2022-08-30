@@ -3,7 +3,7 @@ package AndroidBasic.AndroidFourComponents.ActivityAndFragment;
 import android.os.Bundle;
 import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentTransaction;
-import com.example.aio_android.BaseActivity;
+import com.aio.aio_android.BaseActivity;
 import com.example.aio_android.R;
 import com.example.aio_android.databinding.ActivityAndFragmentBinding;
 

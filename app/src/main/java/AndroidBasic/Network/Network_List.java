@@ -2,12 +2,8 @@ package AndroidBasic.Network;
 
 import AndroidExampleAdapter.ListView_Type_One_Adapter;
 import AndroidExampleModel.Network_Model;
-import android.content.Context;
-import android.net.ConnectivityManager;
-import android.net.NetworkCapabilities;
 import android.os.Bundle;
-import android.widget.Toast;
-import com.example.aio_android.BaseActivity;
+import com.aio.aio_android.BaseActivity;
 import com.example.aio_android.R;
 import com.example.aio_android.databinding.NetworkListBinding;
 

@@ -2,12 +2,8 @@ package AndroidBasic.AndroidFourComponents.BottomNavigationFragmentView;
 
 import AndroidBasic.AndroidFourComponents.ActivityAndFragment.FragmentA;
 import AndroidBasic.AndroidFourComponents.ActivityAndFragment.FragmentB;
-import AndroidBasic.RecyclerAndListView.ListViewFragment;
-import AndroidBasic.RecyclerAndListView.RecyclerViewFragment;
 import android.os.Bundle;
-import android.util.Log;
-import android.widget.TextView;
-import com.example.aio_android.BaseActivity;
+import com.aio.aio_android.BaseActivity;
 import com.example.aio_android.R;
 import com.example.aio_android.databinding.BottomNavigationFragmentBinding;
 import com.google.android.material.bottomnavigation.BottomNavigationView;

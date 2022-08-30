@@ -5,7 +5,7 @@
               android:layout_width="match_parent"
               android:layout_height="match_parent"
               android:orientation="vertical"
-              tools:context=".MainActivity" >
+              tools:context="com.aio.aio_android.MainActivity" >
 
     <include layout="@layout/toolbar" android:id="@+id/layout"/>
 
@@ -104,6 +104,13 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="데이터 지우기"/>
+
+        <Button
+                android:id="@+id/deleteAllBtn"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="데이터 모두 지우기"/>
+
         <Button
                 android:id="@+id/updateBtn"
                 android:layout_width="match_parent"
@@ -115,6 +122,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="데이터 불러오기"/>
+
     </LinearLayout>
 
 

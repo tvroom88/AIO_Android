@@ -1,7 +1,7 @@
 package AndroidBasic.RecyclerAndListView;
 
 import android.os.Bundle;
-import com.example.aio_android.BaseActivity;
+import com.aio.aio_android.BaseActivity;
 import com.example.aio_android.R;
 import com.example.aio_android.databinding.RecyclerAndListBinding;
 import com.google.android.material.bottomnavigation.BottomNavigationView;

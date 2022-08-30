@@ -2,13 +2,8 @@ package AndroidBasic.AndroidFourComponents;
 
 import AndroidExampleAdapter.ListView_Type_One_Adapter;
 import AndroidExampleModel.FourComponent_Model;
-import AndroidExampleModel.JetPack_Model;
-import android.widget.ListView;
-import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
-import com.example.aio_android.BaseActivity;
-import com.example.aio_android.R;
-import com.example.aio_android.databinding.ExampleListBinding;
+import com.aio.aio_android.BaseActivity;
 import com.example.aio_android.databinding.FourComponentsListBinding;
 
 public class Four_Components_List extends BaseActivity {

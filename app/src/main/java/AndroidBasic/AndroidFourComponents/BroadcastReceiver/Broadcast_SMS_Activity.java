@@ -2,7 +2,8 @@ package AndroidBasic.AndroidFourComponents.BroadcastReceiver;
 
 import android.content.Intent;
 import android.os.Bundle;
-import com.example.aio_android.BaseActivity;
+import android.widget.Toast;
+import com.aio.aio_android.BaseActivity;
 import com.example.aio_android.databinding.BroadcastSmsBinding;
 
 public class Broadcast_SMS_Activity extends BaseActivity {
@@ -20,6 +21,7 @@ public class Broadcast_SMS_Activity extends BaseActivity {
         setToolbar(binding.layout.toolbar, binding.layout.toolbarImage, binding.layout.tooblarTitle, title);
 
         binding.button.setOnClickListener(view -> finish());
+        Toast.makeText(getApplicationContext(), "SMS and Call log permissions 문제 때문에 막아두었습니다", Toast.LENGTH_SHORT).show();
 
         Intent passedIntent = getIntent();
         processIntent(passedIntent);

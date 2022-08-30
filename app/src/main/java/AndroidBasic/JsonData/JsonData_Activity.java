@@ -2,7 +2,7 @@ package AndroidBasic.JsonData;
 
 import android.os.Build;
 import android.os.Bundle;
-import com.example.aio_android.BaseActivity;
+import com.aio.aio_android.BaseActivity;
 import com.example.aio_android.databinding.JsonDataBinding;
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;

@@ -1,13 +1,10 @@
 package AndroidExampleList;
 
-import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
 import androidx.recyclerview.widget.DividerItemDecoration;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
-import com.example.aio_android.BaseActivity;
-import com.example.aio_android.R;
-import com.example.aio_android.databinding.ActivityMainBinding;
+import com.aio.aio_android.BaseActivity;
 import com.example.aio_android.databinding.ExampleListBinding;
 
 /**

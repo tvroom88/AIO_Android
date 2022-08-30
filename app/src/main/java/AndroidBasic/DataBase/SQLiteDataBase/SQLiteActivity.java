@@ -2,7 +2,7 @@ package AndroidBasic.DataBase.SQLiteDataBase;
 
 import android.os.Bundle;
 import android.widget.Toast;
-import com.example.aio_android.BaseActivity;
+import com.aio.aio_android.BaseActivity;
 import com.example.aio_android.databinding.DatabaseSqliteBinding;
 
 /**
