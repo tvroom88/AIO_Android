@@ -7,7 +7,7 @@ import android.os.Bundle;
 import android.os.Handler;
 import android.os.Looper;
 import android.util.Log;
-import com.example.aio_android.BaseActivity;
+import com.aio.aio_android.BaseActivity;
 import com.example.aio_android.databinding.NetworkOkhttp3Binding;
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;

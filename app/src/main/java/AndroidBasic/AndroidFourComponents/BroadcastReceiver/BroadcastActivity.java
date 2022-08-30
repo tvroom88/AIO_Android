@@ -5,7 +5,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.telephony.SmsManager;
 import android.widget.Toast;
-import com.example.aio_android.BaseActivity;
+import com.aio.aio_android.BaseActivity;
 import com.example.aio_android.databinding.BroadcastBinding;
 import com.gun0912.tedpermission.PermissionListener;
 import com.gun0912.tedpermission.normal.TedPermission;
@@ -43,7 +43,8 @@ public class BroadcastActivity extends BaseActivity {
                 smsManager.sendTextMessage(phoneNo, null, sms, null, null);
                 Toast.makeText(getApplicationContext(), "전송 완료!", Toast.LENGTH_SHORT).show();
             } catch (Exception e) {
-                Toast.makeText(getApplicationContext(), "SMS 실패, please try again later!", Toast.LENGTH_SHORT).show();
+//                Toast.makeText(getApplicationContext(), "SMS 실패, please try again later!", Toast.LENGTH_SHORT).show();
+                Toast.makeText(getApplicationContext(), "SMS and Call log permissions 문제 때문에 막아두었습니다", Toast.LENGTH_SHORT).show();
                 e.printStackTrace();
             }
         });

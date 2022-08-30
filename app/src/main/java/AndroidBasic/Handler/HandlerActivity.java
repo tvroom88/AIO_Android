@@ -7,7 +7,7 @@ import android.os.Bundle;
 import android.os.Handler;
 import android.os.Looper;
 import android.view.View;
-import com.example.aio_android.BaseActivity;
+import com.aio.aio_android.BaseActivity;
 import com.example.aio_android.R;
 import com.example.aio_android.databinding.HandlerBinding;
 

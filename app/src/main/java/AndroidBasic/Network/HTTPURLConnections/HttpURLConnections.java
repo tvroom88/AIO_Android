@@ -1,16 +1,10 @@
 package AndroidBasic.Network.HTTPURLConnections;
 
 import AndroidBasic.Network.NetworkUtil;
-import AndroidBasic.Network.Network_List;
-import android.content.Context;
-import android.net.ConnectivityManager;
-import android.net.NetworkCapabilities;
-import android.net.NetworkInfo;
 import android.os.Bundle;
 import android.os.Handler;
 import android.os.Looper;
-import android.widget.Toast;
-import com.example.aio_android.BaseActivity;
+import com.aio.aio_android.BaseActivity;
 import com.example.aio_android.R;
 import com.example.aio_android.databinding.NetworkHttpUrlconnectionBinding;
 import java.io.BufferedReader;

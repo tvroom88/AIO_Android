@@ -6,14 +6,14 @@
         xmlns:tools="http://schemas.android.com/tools"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        tools:context=".MainActivity"
+        tools:context="com.aio.aio_android.MainActivity"
         android:id="@+id/drawer_layout">
 
     <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:background="#FFFFCC"
-            tools:context=".MainActivity">
+            tools:context="com.aio.aio_android.MainActivity">
 
         <!--Custom Toolbar-->
         <include layout="@layout/toolbar" android:id="@+id/layout"/>
@@ -149,5 +149,5 @@
             android:layout_gravity="start"
             android:fitsSystemWindows="true"
             app:headerLayout="@layout/toolbar_navi_header"
-            app:menu="@menu/bottom_nav_menu"/>
+            app:menu="@menu/nav_menu_for_main"/>
 </androidx.drawerlayout.widget.DrawerLayout>

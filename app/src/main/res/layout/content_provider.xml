@@ -5,7 +5,7 @@
         xmlns:tools="http://schemas.android.com/tools"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        tools:context=".MainActivity">
+        tools:context="com.aio.aio_android.MainActivity">
 
     <!--Custom Toolbar-->
     <include layout="@layout/toolbar" android:id="@+id/layout"/>

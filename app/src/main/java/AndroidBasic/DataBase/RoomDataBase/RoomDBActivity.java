@@ -3,9 +3,8 @@ package AndroidBasic.DataBase.RoomDataBase;
 import android.os.Bundle;
 import android.os.Handler;
 import android.os.Looper;
-import com.example.aio_android.BaseActivity;
+import com.aio.aio_android.BaseActivity;
 import com.example.aio_android.databinding.DatabaseRoomBinding;
-
 import java.util.List;
 
 
@@ -63,6 +62,12 @@ public class RoomDBActivity extends BaseActivity {
 
         });
 
+        binding.deleteAllBtn.setOnClickListener(v -> {
+            flag = 5;
+            Thread t = new Thread(insertRunnable);
+            t.start();
+        });
+
         binding.updateBtn.setOnClickListener(v ->{
             flag = 3;
             Thread t = new Thread(insertRunnable);
@@ -102,9 +107,6 @@ public class RoomDBActivity extends BaseActivity {
 
     @Override
     protected void onDestroy() {
-
-        callThread(5);
-
         super.onDestroy();
         StudentDB.destroyInstance();
         studentDB = null;
@@ -175,7 +177,6 @@ public class RoomDBActivity extends BaseActivity {
                 sb.append("major : ").append(curStd.getMajor()).append("\n\n");
             }
         }
-
         return sb;
     }
 }

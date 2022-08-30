@@ -7,7 +7,7 @@
         android:layout_height="wrap_content"
         android:id="@+id/custom_dialog"
         android:background="#f5deb3"
-        tools:context=".CustomDialog">
+        tools:context="com.aio.aio_android.CustomDialog">
 
     <ImageView
             android:id="@+id/cancel_button"

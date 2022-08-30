@@ -1,7 +1,7 @@
 package AndroidBasic.DiverseLayout;
 
 import android.os.Bundle;
-import com.example.aio_android.BaseActivity;
+import com.aio.aio_android.BaseActivity;
 import com.example.aio_android.R;
 import com.example.aio_android.databinding.DiverseLayoutBinding;
 import com.google.android.material.bottomnavigation.BottomNavigationView;

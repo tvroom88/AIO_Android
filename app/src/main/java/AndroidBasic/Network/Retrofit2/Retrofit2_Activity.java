@@ -4,7 +4,7 @@ import AndroidBasic.Network.NetworkUtil;
 import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
-import com.example.aio_android.BaseActivity;
+import com.aio.aio_android.BaseActivity;
 import com.example.aio_android.R;
 import com.example.aio_android.databinding.NetworkRetrofitBinding;
 import retrofit2.Call;

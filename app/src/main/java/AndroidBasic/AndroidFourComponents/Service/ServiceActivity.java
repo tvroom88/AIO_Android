@@ -3,7 +3,7 @@ package AndroidBasic.AndroidFourComponents.Service;
 import android.content.Intent;
 import android.os.Build;
 import android.os.Bundle;
-import com.example.aio_android.BaseActivity;
+import com.aio.aio_android.BaseActivity;
 import com.example.aio_android.databinding.ServiceBinding;
 
 

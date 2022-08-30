@@ -41,7 +41,9 @@ public class Android_Lists_Model {
             new Android_Example_Item(6, "데이터베이스", false),
             new Android_Example_Item(7, "Json 데이터 처리", true),
             new Android_Example_Item(8, "네트워트 통신", false),
-            new Android_Example_Item(9, "리스트뷰, 리사이클러뷰", true)
+            new Android_Example_Item(9, "리스트뷰, 리사이클러뷰", true),
+            new Android_Example_Item(10, "그리드뷰", true)
+
 //            new Android_Example_Item(8, "디자인패턴", true),
 //            new Android_Example_Item(9, "JetPack", false),
 //            new Android_Example_Item(9, "뷰 그래픽", false),
@@ -65,7 +67,8 @@ public class Android_Lists_Model {
             DataBase_List.class, //6
             JsonData_Activity.class, //7
             Network_List.class,  //8
-            RecyclerAndListActivity.class //9
+            RecyclerAndListActivity.class, //9
+            RecyclerAndListActivity.class
 //            Jetpack_List.class //8
     );
 

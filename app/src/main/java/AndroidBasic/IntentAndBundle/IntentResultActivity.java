@@ -3,7 +3,7 @@ package AndroidBasic.IntentAndBundle;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
-import com.example.aio_android.BaseActivity;
+import com.aio.aio_android.BaseActivity;
 import com.example.aio_android.databinding.IntentResultBinding;
 
 /**
