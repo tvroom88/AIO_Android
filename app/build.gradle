@@ -1,5 +1,8 @@
 plugins {
     id 'com.android.application'
+
+    // Realm DB를 위해 추가 된 부분
+     id "realm-android"
 }
 
 android {

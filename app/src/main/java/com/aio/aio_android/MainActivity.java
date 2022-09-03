@@ -36,7 +36,6 @@ public class MainActivity extends BaseActivity implements NavigationView.OnNavig
         setToolbar(binding.layout.toolbar, binding.layout.toolbarImage, binding.layout.tooblarTitle, title);
         binding.layout.toolbarImage.setImageResource(R.drawable.three_line);
 
-
         binding.layout.toolbarImage.setOnClickListener(v -> {
             binding.drawerLayout.openDrawer(GravityCompat.START);
         });

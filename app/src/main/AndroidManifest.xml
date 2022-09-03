@@ -12,12 +12,13 @@
             android:name="android.permission.WRITE_EXTERNAL_STORAGE"/> <!-- ContentResolverWithPhoneBook 예제 :  전화번호 기록 가져올떄 추가해야하는 부분 -->
     <uses-permission android:name="android.permission.READ_CONTACTS"/>
     <uses-permission android:name="android.permission.WRITE_CONTACTS"/> <!-- Broadcast_SMS_Activity 예제 : SMS 받는 부분 -->
-<!--    <uses-permission android:name="android.permission.RECEIVE_SMS"/>-->
-<!--    <uses-permission android:name="android.permission.SEND_SMS"/> &lt;!&ndash; 네트워크 통신을 위한 permission &ndash;&gt;-->
+    <!-- <uses-permission android:name="android.permission.RECEIVE_SMS"/> -->
+    <!-- <uses-permission android:name="android.permission.SEND_SMS"/> &lt;!&ndash; 네트워크 통신을 위한 permission &ndash;&gt; -->
     <uses-permission android:name="android.permission.INTERNET"/> <!-- 인터넷 연결상태 체크 -->
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
 
     <application
+            android:name="AndroidBasic.DataBase.Realm.RealmDB"
             android:allowBackup="true"
             android:icon="@drawable/aio_android"
             android:label="@string/app_name"
@@ -25,8 +26,15 @@
             android:supportsRtl="true"
             android:theme="@style/Theme.AIO_Android">
         <activity
+                android:name="AndroidBasic.DataBase.Realm.RealmActivity"
+                android:exported="true"/>
+        <activity
+                android:name="AndroidBasic.GridView.GridViewActivity"
+                android:exported="true"/>
+        <activity
                 android:name="com.aio.aio_android.CustomDialog"
-                android:exported="true" tools:ignore="Instantiatable"/>
+                android:exported="true"
+                tools:ignore="Instantiatable"/>
         <activity
                 android:name="AndroidBasic.AndroidFourComponents.BottomNavigationFragmentView.BottomNavigationFragmentActivity"
                 android:exported="true"/>
@@ -94,7 +102,6 @@
         <activity
                 android:name="AndroidBasic.AndroidFourComponents.Service.ServiceActivity"
                 android:exported="true"/>
-
         <activity
                 android:name="AndroidBasic.AndroidFourComponents.ActivityAndFragment.Activity_And_Fragment"
                 android:exported="true"/>
@@ -130,10 +137,7 @@
                 android:name="AndroidBasic.AndroidFourComponents.Service.ServiceA"
                 android:enabled="true"
                 android:exported="true">
-        </service>
-
-        <!-- foreground service 예제에서 Dismiss button 쓰려고 추가한 부분 -->
-
+        </service> <!-- foreground service 예제에서 Dismiss button 쓰려고 추가한 부분 -->
         <receiver
                 android:name="AndroidBasic.AndroidFourComponents.Service.AutoDismissReceiver"
                 android:enabled="true"
@@ -161,8 +165,6 @@
         <meta-data
                 android:name="preloaded_fonts"
                 android:resource="@array/preloaded_fonts"/>
-
-
     </application>
 
 </manifest>
