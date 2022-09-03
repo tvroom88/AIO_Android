@@ -19,7 +19,7 @@ import java.util.List;
 public class RoomDBActivity extends BaseActivity {
 
     private DatabaseRoomBinding binding;
-    final String title = "Room 데이터 베이스";
+    final String title = "Room 데이터베이스";
 
     //RoomDatabase 불러오기
     private  StudentDB studentDB;

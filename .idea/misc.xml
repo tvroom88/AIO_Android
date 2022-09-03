@@ -6,7 +6,10 @@
         <entry key="../../../../../layout/custom_preview.xml" value="0.3265625" />
         <entry key="../../Android_workspace/AIO_Android/app/src/main/res/layout/activity_main.xml" value="0.1546875" />
         <entry key="../../Android_workspace/AIO_Android/app/src/main/res/layout/content_resolver_with_phone_book.xml" value="0.223731884057971" />
+        <entry key="../../Android_workspace/AIO_Android/app/src/main/res/layout/database_realm.xml" value="0.15520833333333334" />
         <entry key="../../Android_workspace/AIO_Android/app/src/main/res/layout/database_room.xml" value="0.1546875" />
+        <entry key="../../Android_workspace/AIO_Android/app/src/main/res/layout/grid_view.xml" value="0.15364583333333334" />
+        <entry key="../../Android_workspace/AIO_Android/app/src/main/res/layout/gridview_list_item.xml" value="0.25" />
         <entry key="../../Android_workspace/AIO_Android/app/src/main/res/layout/recycler_and_list_item.xml" value="0.13958333333333334" />
         <entry key="../../Android_workspace/AIO_Android/app/src/main/res/layout/toolbar.xml" value="0.223731884057971" />
         <entry key="../../Android_workspace/AIO_Android/app/src/main/res/layout/toolbar_navi_header.xml" value="0.223731884057971" />

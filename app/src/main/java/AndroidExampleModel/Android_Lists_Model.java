@@ -4,6 +4,7 @@ import AndroidBasic.AndroidFourComponents.Four_Components_List;
 import AndroidBasic.AndroidLifeCycle.LifeCycleActivity;
 import AndroidBasic.DataBase.DataBase_List;
 import AndroidBasic.DiverseLayout.DiverseLayoutActivity;
+import AndroidBasic.GridView.GridViewActivity;
 import AndroidBasic.Handler.HandlerActivity;
 import AndroidBasic.IntentAndBundle.IntentAndBundleActivity;
 import AndroidBasic.JsonData.JsonData_Activity;
@@ -68,7 +69,7 @@ public class Android_Lists_Model {
             JsonData_Activity.class, //7
             Network_List.class,  //8
             RecyclerAndListActivity.class, //9
-            RecyclerAndListActivity.class
+            GridViewActivity.class // 10
 //            Jetpack_List.class //8
     );
 

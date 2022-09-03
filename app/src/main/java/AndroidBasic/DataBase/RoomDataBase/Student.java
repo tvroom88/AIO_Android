@@ -17,7 +17,7 @@ public class Student {
 //    @ColumnInfo(name = "major")
     public String major;
 
-    Student(String Sname, int age, String major){
+    public Student(String Sname, int age, String major){
         this.Sname = Sname;
         this.age = age;
         this.major = major;
