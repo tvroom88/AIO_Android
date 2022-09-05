@@ -5,13 +5,71 @@
         xmlns:app="http://schemas.android.com/apk/res-auto"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        tools:context="AndroidBasic.AndroidDesign.MVP_easy_example">
+        tools:context="AndroidBasic.AndroidDesign.MVP.MVP_easy_example">
 
+    <!--Custom Toolbar-->
+    <include layout="@layout/toolbar" android:id="@+id/layout"/>
+
+    <!-- TextView to display heading of the activity -->
     <TextView
-            android:text="TextView"
+            android:id="@+id/textView1"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:id="@+id/mvp_textview1"
-            app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" android:layout_marginTop="20dp"/>
+            android:fontFamily="@font/english"
+            android:text="MVP Architecture Pattern"
+            android:textAlignment="center"
+            android:textColor="@android:color/holo_green_dark"
+            android:textSize="30sp"
+            android:textStyle="bold"
+            android:layout_marginTop="10dp"
+            app:layout_constraintTop_toBottomOf="@+id/layout"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"/>
+
+
+    <!-- TextView to display the random string -->
+    <TextView
+            android:id="@+id/textView"
+            android:layout_width="411dp"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/english"
+            android:gravity="center"
+            android:padding="8dp"
+            android:text="Course Description"
+            android:textAlignment="center"
+            android:textAppearance="?android:attr/textAppearanceSearchResultTitle"
+            app:layout_constraintBottom_toTopOf="@+id/button"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView1"/>
+
+    <!-- Button to display next random string -->
+    <Button
+            android:id="@+id/button"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="@android:dimen/notification_large_icon_height"
+            android:background="#4CAF50"
+            android:text="Display Next Course"
+            android:textAllCaps="true"
+            android:textColor="#0D47A1"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent"/>
+
+    <!-- Progress Bar to be displayed before displaying next string -->
+    <ProgressBar
+            android:id="@+id/progressBar"
+            style="?android:attr/progressBarStyleLarge"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            app:layout_constraintBottom_toTopOf="@+id/button"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView1"/>
+
 </androidx.constraintlayout.widget.ConstraintLayout>

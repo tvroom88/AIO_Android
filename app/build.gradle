@@ -80,6 +80,12 @@ dependencies {
     implementation 'com.squareup.retrofit2:converter-gson:2.6.2'
     implementation 'com.squareup.retrofit2:retrofit:2.6.2'
 
+    // ViewModel - 라이프 사이클
+    implementation "androidx.lifecycle:lifecycle-viewmodel-ktx:2.5.1"
+    // LiveData - 데이터의 변경 사항을 알 수 있음
+    implementation "androidx.lifecycle:lifecycle-livedata-ktx:2.5.1"
 
-    implementation 'androidx.core:core-ktx:1.8.0'
+
+    //    implementation 'androidx.core:core-ktx:1.8.0'
+
 }

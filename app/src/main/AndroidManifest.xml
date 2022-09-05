@@ -26,6 +26,9 @@
             android:supportsRtl="true"
             android:theme="@style/Theme.AIO_Android">
         <activity
+                android:name="AndroidBasic.AndroidDesign.AndroidDesign_List"
+                android:exported="true"/>
+        <activity
                 android:name="AndroidBasic.DataBase.Realm.RealmActivity"
                 android:exported="true"/>
         <activity
@@ -115,13 +118,13 @@
                 android:name="AndroidBasic.JetPack.DataAndViewBinding"
                 android:exported="true"/>
         <activity
-                android:name="AndroidBasic.AndroidDesign.MVVM_easy_example"
+                android:name="AndroidBasic.AndroidDesign.MVVM.MVVM_easy_example"
                 android:exported="true"/>
         <activity
-                android:name="AndroidBasic.AndroidDesign.MVP_easy_example"
+                android:name="AndroidBasic.AndroidDesign.MVP.MVP_easy_example"
                 android:exported="true"/>
         <activity
-                android:name="AndroidBasic.AndroidDesign.MVC_easy_example"
+                android:name="AndroidBasic.AndroidDesign.MVC.MVC_easy_example"
                 android:exported="true"/>
         <activity
                 android:name="com.aio.aio_android.MainActivity"

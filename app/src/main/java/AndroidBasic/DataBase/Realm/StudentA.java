@@ -1,10 +1,8 @@
 package AndroidBasic.DataBase.Realm;
 
-import androidx.room.Entity;
 import androidx.room.PrimaryKey;
 import io.realm.RealmObject;
 
-@Entity(tableName = "studentA")
 public class StudentA extends RealmObject {
 
     @PrimaryKey(autoGenerate = true)
@@ -12,7 +10,6 @@ public class StudentA extends RealmObject {
     private String Sname;
     private int age;
     private String major;
-//    private RealmList<StudentA> cats;
 
     public StudentA(){
 

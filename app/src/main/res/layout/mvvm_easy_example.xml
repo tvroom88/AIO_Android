@@ -5,14 +5,55 @@
         xmlns:app="http://schemas.android.com/apk/res-auto"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        tools:context="AndroidBasic.AndroidDesign.MVVM_easy_example">
+        tools:context="AndroidBasic.AndroidDesign.MVVM.MVVM_easy_example">
 
-    <TextView
-            android:text="TextView"
-            android:layout_width="wrap_content"
+    <!--Custom Toolbar-->
+    <include layout="@layout/toolbar" android:id="@+id/layout"/>
+
+
+    <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:id="@+id/mvvm_textview1"
-            app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" android:layout_marginTop="20dp"/>
+            android:layout_marginTop="10dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/layout"
+            android:layout_marginStart="30dp"
+            android:layout_marginEnd="30dp">
+
+        <TextView
+                android:text="LiveData를 사용해서 데이터를 관찰합니다"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:id="@+id/MVVM_textview1"
+                android:textSize="18sp"/>
+
+        <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="textPersonName"
+                android:hint="put Any String"
+                android:ems="10"
+                android:id="@+id/MVVM_edittext1"
+                android:minHeight="48dp"/>
+
+        <Button
+                android:text="바꾸기"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/MVVM_button1"
+                android:layout_marginTop="5dp"/>
+
+        <TextView
+                android:text="아직 적은 내용이 없습니다."
+                android:layout_marginTop="20dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/MVVM_textview2"
+                android:gravity="center"
+                android:textSize="14sp"/>
+    </LinearLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
