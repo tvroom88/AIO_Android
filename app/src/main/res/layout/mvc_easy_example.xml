@@ -5,15 +5,76 @@
         xmlns:app="http://schemas.android.com/apk/res-auto"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        tools:context="AndroidBasic.AndroidDesign.MVC_easy_example">
+        tools:context="AndroidBasic.AndroidDesign.MVC.MVC_easy_example">
 
-    <TextView
-            android:text="push!"
-            android:layout_width="wrap_content"
+    <!--Custom Toolbar-->
+    <include layout="@layout/toolbar" android:id="@+id/layout"/>
+
+    <!-- Provided Linear layout for the activity. -->
+    <LinearLayout
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:id="@+id/mvc_textview1"
+            android:orientation="vertical"
+            app:layout_constraintTop_toBottomOf="@+id/layout"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            android:layout_marginTop="30dp"/>
+            app:layout_constraintStart_toStartOf="parent">
+
+        <!-- TextView to display heading of the activity. -->
+        <TextView
+                android:id="@+id/textView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="40dp"
+                android:layout_marginBottom="60dp"
+                android:fontFamily="@font/english"
+                android:text="MVC Architecture Pattern"
+                android:textAlignment="center"
+                android:textColor="@android:color/holo_green_dark"
+                android:textSize="30sp"
+                android:textStyle="bold" />
+
+        <!-- First Button of the activity. -->
+        <Button
+                android:id="@+id/button"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="30dp"
+                android:layout_marginEnd="20dp"
+                android:layout_marginBottom="20dp"
+                android:fontFamily="@font/english"
+                android:text="Count:0"
+                android:textSize="24sp"
+                android:textStyle="bold" />
+
+        <!-- Second Button of the activity. -->
+        <Button
+                android:id="@+id/button2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="50dp"
+                android:layout_marginEnd="20dp"
+                android:layout_marginBottom="20dp"
+                android:fontFamily="@font/english"
+                android:text="Count:0"
+                android:textSize="24sp"
+                android:textStyle="bold" />
+
+        <!-- Third Button of the activity. -->
+        <Button
+                android:id="@+id/button3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="50dp"
+                android:layout_marginEnd="20dp"
+                android:layout_marginBottom="20dp"
+                android:fontFamily="@font/english"
+                android:text="Count:0"
+                android:textSize="24sp"
+                android:textStyle="bold" />
+
+
+    </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>

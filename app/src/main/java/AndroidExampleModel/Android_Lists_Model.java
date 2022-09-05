@@ -1,5 +1,6 @@
 package AndroidExampleModel;
 
+import AndroidBasic.AndroidDesign.AndroidDesign_List;
 import AndroidBasic.AndroidFourComponents.Four_Components_List;
 import AndroidBasic.AndroidLifeCycle.LifeCycleActivity;
 import AndroidBasic.DataBase.DataBase_List;
@@ -43,9 +44,8 @@ public class Android_Lists_Model {
             new Android_Example_Item(7, "Json 데이터 처리", true),
             new Android_Example_Item(8, "네트워트 통신", false),
             new Android_Example_Item(9, "리스트뷰, 리사이클러뷰", true),
-            new Android_Example_Item(10, "그리드뷰", true)
-
-//            new Android_Example_Item(8, "디자인패턴", true),
+            new Android_Example_Item(10, "그리드뷰", true),
+            new Android_Example_Item(11, "디자인패턴", false)
 //            new Android_Example_Item(9, "JetPack", false),
 //            new Android_Example_Item(9, "뷰 그래픽", false),
 //            new Android_Example_Item(9, "멀티미디어 다루기", false),
@@ -69,8 +69,8 @@ public class Android_Lists_Model {
             JsonData_Activity.class, //7
             Network_List.class,  //8
             RecyclerAndListActivity.class, //9
-            GridViewActivity.class // 10
-//            Jetpack_List.class //8
+            GridViewActivity.class, // 10
+            AndroidDesign_List.class //11
     );
 
     public List<Class> get_Class_List() {
