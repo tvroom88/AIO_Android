@@ -3,9 +3,6 @@ package AndroidExampleModel;
 import AndroidBasic.AndroidDesign.MVC.MVC_easy_example;
 import AndroidBasic.AndroidDesign.MVP.MVP_easy_example;
 import AndroidBasic.AndroidDesign.MVVM.MVVM_easy_example;
-import AndroidBasic.DataBase.Realm.RealmActivity;
-import AndroidBasic.DataBase.RoomDataBase.RoomDBActivity;
-import AndroidBasic.DataBase.SQLiteDataBase.SQLiteActivity;
 import AndroidExampleList.Android_Example_Item;
 
 import java.util.Arrays;

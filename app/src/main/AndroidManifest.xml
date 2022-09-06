@@ -26,6 +26,15 @@
             android:supportsRtl="true"
             android:theme="@style/Theme.AIO_Android">
         <activity
+                android:name="AndroidBasic.ImageLibraries.LoadImage.ImageLibrariesActivity"
+                android:exported="false"/>
+        <activity
+                android:name="AndroidBasic.ImageLibraries.LoadImage.ImageLoadActivity"
+                android:exported="false"/>
+        <activity
+                android:name="AndroidBasic.ImageLibraries.ImageLibraries_List"
+                android:exported="false"/>
+        <activity
                 android:name="AndroidBasic.AndroidDesign.AndroidDesign_List"
                 android:exported="true"/>
         <activity

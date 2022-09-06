@@ -7,6 +7,7 @@ import AndroidBasic.DataBase.DataBase_List;
 import AndroidBasic.DiverseLayout.DiverseLayoutActivity;
 import AndroidBasic.GridView.GridViewActivity;
 import AndroidBasic.Handler.HandlerActivity;
+import AndroidBasic.ImageLibraries.ImageLibraries_List;
 import AndroidBasic.IntentAndBundle.IntentAndBundleActivity;
 import AndroidBasic.JsonData.JsonData_Activity;
 import AndroidBasic.Network.Network_List;
@@ -45,9 +46,10 @@ public class Android_Lists_Model {
             new Android_Example_Item(8, "네트워트 통신", false),
             new Android_Example_Item(9, "리스트뷰, 리사이클러뷰", true),
             new Android_Example_Item(10, "그리드뷰", true),
-            new Android_Example_Item(11, "디자인패턴", false)
+            new Android_Example_Item(11, "디자인패턴", false),
+            new Android_Example_Item(12, "이미지 라이브러리", false)
 //            new Android_Example_Item(9, "JetPack", false),
-//            new Android_Example_Item(9, "뷰 그래픽", false),
+//
 //            new Android_Example_Item(9, "멀티미디어 다루기", false),
 //            new Android_Example_Item(9, "외부 데이터베이스와 연동", false),
 //            new Android_Example_Item(9, "위치 기반 서비스", false),
@@ -70,7 +72,9 @@ public class Android_Lists_Model {
             Network_List.class,  //8
             RecyclerAndListActivity.class, //9
             GridViewActivity.class, // 10
-            AndroidDesign_List.class //11
+            AndroidDesign_List.class, //11
+            ImageLibraries_List.class //12
+
     );
 
     public List<Class> get_Class_List() {
