@@ -1,7 +1,6 @@
 package AndroidBasic.DataBase.RoomDataBase;
 
 import androidx.room.*;
-
 import java.util.List;
 
 @Dao

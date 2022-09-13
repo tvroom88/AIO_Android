@@ -1,5 +1,6 @@
-package AndroidBasic.JetPack;
+package AndroidBasic.JetPack.DataAndViewBinding;
 
+import AndroidBasic.JetPack.DataAndViewBinding.User;
 import android.view.View;
 import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
@@ -31,7 +32,7 @@ public class DataAndViewBinding extends AppCompatActivity {
         // 두번째 방법
         // binding = DataBindingUtil.setContentView(this, R.layout.android_data_and_view_binding);
 
-        //binding을 통해 User 객체 업데이트
+        //binding을 통해 유저 객체 업데이트
         binding.setUser(new User("James", 32));
 
 

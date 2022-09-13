@@ -26,6 +26,12 @@
             android:supportsRtl="true"
             android:theme="@style/Theme.AIO_Android">
         <activity
+                android:name="AndroidAdvanced.RetrofitAndRecycler.RetrofitAndRecyclerActivity"
+                android:exported="false"/>
+        <activity
+                android:name="AndroidAdvanced.AndroidAdvanced_List"
+                android:exported="false"/>
+        <activity
                 android:name="AndroidBasic.ImageLibraries.LoadImage.ImageLibrariesActivity"
                 android:exported="false"/>
         <activity
@@ -124,7 +130,7 @@
                 android:name="AndroidExampleList.Android_Example_List"
                 android:exported="true"/>
         <activity
-                android:name="AndroidBasic.JetPack.DataAndViewBinding"
+                android:name="AndroidBasic.JetPack.DataAndViewBinding.DataAndViewBinding"
                 android:exported="true"/>
         <activity
                 android:name="AndroidBasic.AndroidDesign.MVVM.MVVM_easy_example"

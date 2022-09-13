@@ -1,5 +1,6 @@
 package com.aio.aio_android;
 
+import AndroidAdvanced.AndroidAdvanced_List;
 import AndroidExampleList.Android_Example_List;
 import AndroidExampleModel.MainActivity_Model;
 import android.content.Intent;
@@ -95,8 +96,11 @@ public class MainActivity extends BaseActivity implements NavigationView.OnNavig
 
     // 심화 버튼 눌렀을떄
     public void setOnClickAdvancedButton(){
-        Toast myToast = Toast.makeText(this.getApplicationContext(), "준비중입니다.", Toast.LENGTH_SHORT);
-        myToast.show();
+//        Toast myToast = Toast.makeText(this.getApplicationContext(), "준비중입니다.", Toast.LENGTH_SHORT);
+//        myToast.show();
+        Intent intent = new Intent(this, AndroidAdvanced_List.class);
+        startActivity(intent);
+        overridePendingTransition(R.anim.fadein, R.anim.fadeout);
     }
 
     // 왼쪽 상단 메뉴 부분에 있는 information 버튼 클릭시 Custom Dialog가 나오는 부분

@@ -8,11 +8,14 @@
         <entry key="../../Android_workspace/AIO_Android/app/src/main/res/drawable/ic_home_black_24dp.xml" value="0.164" />
         <entry key="../../Android_workspace/AIO_Android/app/src/main/res/drawable/ic_launcher_background.xml" value="0.254" />
         <entry key="../../Android_workspace/AIO_Android/app/src/main/res/layout/activity_main.xml" value="0.1546875" />
+        <entry key="../../Android_workspace/AIO_Android/app/src/main/res/layout/android_advanced_list.xml" value="0.13958333333333334" />
         <entry key="../../Android_workspace/AIO_Android/app/src/main/res/layout/android_design_list.xml" value="0.1546875" />
         <entry key="../../Android_workspace/AIO_Android/app/src/main/res/layout/content_resolver_with_phone_book.xml" value="0.223731884057971" />
+        <entry key="../../Android_workspace/AIO_Android/app/src/main/res/layout/data_and_view_binding.xml" value="0.223731884057971" />
         <entry key="../../Android_workspace/AIO_Android/app/src/main/res/layout/data_base_list.xml" value="0.1546875" />
         <entry key="../../Android_workspace/AIO_Android/app/src/main/res/layout/database_realm.xml" value="0.15520833333333334" />
         <entry key="../../Android_workspace/AIO_Android/app/src/main/res/layout/database_room.xml" value="0.1546875" />
+        <entry key="../../Android_workspace/AIO_Android/app/src/main/res/layout/example_list.xml" value="0.15364583333333334" />
         <entry key="../../Android_workspace/AIO_Android/app/src/main/res/layout/grid_view.xml" value="0.15364583333333334" />
         <entry key="../../Android_workspace/AIO_Android/app/src/main/res/layout/gridview_list_item.xml" value="0.25" />
         <entry key="../../Android_workspace/AIO_Android/app/src/main/res/layout/image_libraries.xml" value="0.13958333333333334" />
@@ -21,7 +24,12 @@
         <entry key="../../Android_workspace/AIO_Android/app/src/main/res/layout/mvc_easy_example.xml" value="0.1546875" />
         <entry key="../../Android_workspace/AIO_Android/app/src/main/res/layout/mvp_easy_example.xml" value="0.1546875" />
         <entry key="../../Android_workspace/AIO_Android/app/src/main/res/layout/mvvm_easy_example.xml" value="0.15364583333333334" />
+        <entry key="../../Android_workspace/AIO_Android/app/src/main/res/layout/network_list.xml" value="0.15364583333333334" />
+        <entry key="../../Android_workspace/AIO_Android/app/src/main/res/layout/recycler_and_list.xml" value="0.15364583333333334" />
         <entry key="../../Android_workspace/AIO_Android/app/src/main/res/layout/recycler_and_list_item.xml" value="0.13958333333333334" />
+        <entry key="../../Android_workspace/AIO_Android/app/src/main/res/layout/retrofit_and_recycler.xml" value="0.13958333333333334" />
+        <entry key="../../Android_workspace/AIO_Android/app/src/main/res/layout/retrofit_and_recycler_item.xml" value="0.5042093912760417" />
+        <entry key="../../Android_workspace/AIO_Android/app/src/main/res/layout/service.xml" value="0.15364583333333334" />
         <entry key="../../Android_workspace/AIO_Android/app/src/main/res/layout/toolbar.xml" value="0.223731884057971" />
         <entry key="../../Android_workspace/AIO_Android/app/src/main/res/layout/toolbar_navi_header.xml" value="0.223731884057971" />
         <entry key="../../Android_workspace/AIO_Android/app/src/main/res/menu/bottom_nav_menu.xml" value="0.16822916666666668" />

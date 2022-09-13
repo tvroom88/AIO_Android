@@ -1,5 +1,6 @@
 package AndroidExampleModel;
 
+import AndroidAdvanced.RetrofitAndRecycler.RetrofitAndRecyclerActivity;
 import AndroidBasic.AndroidDesign.AndroidDesign_List;
 import AndroidBasic.AndroidFourComponents.Four_Components_List;
 import AndroidBasic.AndroidLifeCycle.LifeCycleActivity;
@@ -9,6 +10,7 @@ import AndroidBasic.GridView.GridViewActivity;
 import AndroidBasic.Handler.HandlerActivity;
 import AndroidBasic.ImageLibraries.ImageLibraries_List;
 import AndroidBasic.IntentAndBundle.IntentAndBundleActivity;
+import AndroidBasic.JetPack.Jetpack_List;
 import AndroidBasic.JsonData.JsonData_Activity;
 import AndroidBasic.Network.Network_List;
 import AndroidBasic.RecyclerAndListView.RecyclerAndListActivity;
@@ -34,7 +36,7 @@ public class Android_Lists_Model {
     }
     //Singleton Pattern 적용 완료------------
 
-    // RecyclerView의 Item에 들어갈 내용들
+    // AndroidBasic 리스트
     private final List<Android_Example_Item> android_example_code_list = Arrays.asList(
             new Android_Example_Item(1, "안드로이드 4대 컴포넌트", false),
             new Android_Example_Item(2, "안드로이드, 프래그먼트 라이프 사이클", true),
@@ -47,9 +49,9 @@ public class Android_Lists_Model {
             new Android_Example_Item(9, "리스트뷰, 리사이클러뷰", true),
             new Android_Example_Item(10, "그리드뷰", true),
             new Android_Example_Item(11, "디자인패턴", false),
-            new Android_Example_Item(12, "이미지 라이브러리", false)
-//            new Android_Example_Item(9, "JetPack", false),
-//
+            new Android_Example_Item(12, "이미지 라이브러리", false),
+            new Android_Example_Item(13, "JetPack", false)
+
 //            new Android_Example_Item(9, "멀티미디어 다루기", false),
 //            new Android_Example_Item(9, "외부 데이터베이스와 연동", false),
 //            new Android_Example_Item(9, "위치 기반 서비스", false),
@@ -60,7 +62,7 @@ public class Android_Lists_Model {
         return this.android_example_code_list;
     }
 
-
+    // AndroidBasic class 리스트
     private final List<Class> class_list = Arrays.asList(
             Four_Components_List.class, //1
             LifeCycleActivity .class, //2
@@ -73,7 +75,8 @@ public class Android_Lists_Model {
             RecyclerAndListActivity.class, //9
             GridViewActivity.class, // 10
             AndroidDesign_List.class, //11
-            ImageLibraries_List.class //12
+            ImageLibraries_List.class, //12
+            Jetpack_List.class //12
 
     );
 
@@ -83,4 +86,23 @@ public class Android_Lists_Model {
 
 
 
+
+    //---------------------------------------------------------------
+    // AndroidAdvanced 리스트
+    private final List<Android_Example_Item> android_advanced_code_list = Arrays.asList(
+            new Android_Example_Item(1, "Retrofit + Room + Recycler", false)
+    );
+
+    public List<Android_Example_Item> getAndroid_advanced_code_list() {
+        return this.android_advanced_code_list;
+    }
+
+    // AndroidBasic class 리스트
+    private final List<Class> android_advanced_class_list = Arrays.asList(
+            RetrofitAndRecyclerActivity.class //1
+    );
+
+    public List<Class> get_Android_Advanced_Class_List() {
+        return this.android_advanced_class_list;
+    }
 }

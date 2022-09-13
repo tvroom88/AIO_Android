@@ -77,7 +77,6 @@ public class Retrofit2_Activity extends BaseActivity {
                 }
                 binding.textView1.setText(str);
             }
-
             @Override
             public void onFailure(Call<data_model> call, Throwable t) {
 

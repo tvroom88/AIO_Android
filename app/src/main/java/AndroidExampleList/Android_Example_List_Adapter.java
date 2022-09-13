@@ -16,10 +16,17 @@ import java.util.List;
 
 public class Android_Example_List_Adapter extends RecyclerView.Adapter<Android_Example_List_Adapter.CustomViewHolder> {
 
-    private final List<Android_Example_Item> android_example_code_list = Android_Lists_Model.getInstance().getAndroid_example_code_list();
-    private final List<Class> android_example_class_list = Android_Lists_Model.getInstance().get_Class_List();
-    private int pos = 0;
+//    private final List<Android_Example_Item> android_example_code_list = Android_Lists_Model.getInstance().getAndroid_example_code_list();
+//    private final List<Class> android_example_class_list = Android_Lists_Model.getInstance().get_Class_List();
+//    private int pos = 0;
 
+    private final List<Android_Example_Item> android_example_code_list;
+    private final List<Class> android_example_class_list;
+
+    public Android_Example_List_Adapter(List<Android_Example_Item> android_example_code_list, List<Class> android_example_class_list){
+        this.android_example_code_list = android_example_code_list;
+        this.android_example_class_list = android_example_class_list;
+    }
 
 //    Android_Example_List_Adapter
     // onCreateViewHolder : 아이템 뷰를 위한 뷰홀더 객체를 생성하여 리턴
@@ -74,7 +81,7 @@ public class Android_Example_List_Adapter extends RecyclerView.Adapter<Android_E
 //            AtomicInteger pos = new AtomicInteger();
 
             view.setOnClickListener(v -> {
-                pos = (getAdapterPosition());
+                int pos = (getAdapterPosition());
                 Intent intent = new Intent(mContext, android_example_class_list.get(pos));
                 mContext.startActivity(intent);
                 ((Activity) mContext).overridePendingTransition(R.anim.fadein, R.anim.fadeout);

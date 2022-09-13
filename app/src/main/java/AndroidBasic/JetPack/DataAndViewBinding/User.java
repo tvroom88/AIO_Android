@@ -1,4 +1,4 @@
-package AndroidBasic.JetPack;
+package AndroidBasic.JetPack.DataAndViewBinding;
 
 public class User {
 

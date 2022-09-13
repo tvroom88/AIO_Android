@@ -1,5 +1,6 @@
 package AndroidExampleList;
 
+import AndroidExampleModel.Android_Lists_Model;
 import android.os.Bundle;
 import androidx.recyclerview.widget.DividerItemDecoration;
 import androidx.recyclerview.widget.LinearLayoutManager;
@@ -38,7 +39,11 @@ public class Android_Example_List extends BaseActivity {
         mRecyclerView = binding.androidExampleListRecycler1;
         mRecyclerView.addItemDecoration(new DividerItemDecoration(this, DividerItemDecoration.VERTICAL));
 
-        mAdapter = new Android_Example_List_Adapter();
+        mAdapter = new Android_Example_List_Adapter(
+                Android_Lists_Model.getInstance().getAndroid_example_code_list(),
+                Android_Lists_Model.getInstance().get_Class_List()
+        );
+
         mRecyclerView.setAdapter(mAdapter);
         mRecyclerView.setLayoutManager(new LinearLayoutManager(this, RecyclerView.VERTICAL, false));
         mAdapter.notifyDataSetChanged();

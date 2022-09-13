@@ -71,7 +71,7 @@ public class ContentProviderActivity extends BaseActivity {
         binding.res.setText("모든 내용이 잘 지워졌습니다.");
     }
 
-    // User 데이터 하나 지우기
+    // 유저 데이터 하나 지우기
     public void removeOne(View view) {
         String str = binding.textName.getText().toString();
         if(str.equals("")){

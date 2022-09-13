@@ -30,7 +30,7 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapte
         RecyclerViewAdapter.CustomViewHolder viewholder = new RecyclerViewAdapter.CustomViewHolder(view, parent.getContext());
 
         return viewholder;
-    }
+    } 
 
     //여기서 View와 받아온 데이터를 연결시켜주는 부분.
     @Override
@@ -58,7 +58,6 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapte
             super(view);
 
             // 뷰 객체에 대한 참조
-
             id = binding.recyclerId;
             name = binding.recyclerName;
             age = binding.recyclerAge;

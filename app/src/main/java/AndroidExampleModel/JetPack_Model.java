@@ -1,6 +1,6 @@
 package AndroidExampleModel;
 
-import AndroidBasic.JetPack.DataAndViewBinding;
+import AndroidBasic.JetPack.DataAndViewBinding.DataAndViewBinding;
 import AndroidExampleList.Android_Example_Item;
 import java.util.Arrays;
 import java.util.List;

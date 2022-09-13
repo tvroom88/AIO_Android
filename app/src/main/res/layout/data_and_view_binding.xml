@@ -9,7 +9,7 @@
         <!-- 데이터바인딩으로 연결할 User클래스 객체를 이 레이아웃에서는 user 라는 이름으로 참조하여 사용하겠다는 설정  -->
         <variable
                 name="user"
-                type="AndroidBasic.JetPack.User" />
+                type="AndroidBasic.JetPack.DataAndViewBinding.User" />
 
     </data>
 
