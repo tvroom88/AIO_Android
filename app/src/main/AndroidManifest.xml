@@ -26,6 +26,15 @@
             android:supportsRtl="true"
             android:theme="@style/Theme.AIO_Android">
         <activity
+                android:name="AndroidAdvanced.MVVM.MVVM_Example"
+                android:exported="false"/>
+        <activity
+                android:name="AndroidBasic.JetPack.PagingaWithLibrary.PagingLibraryActivity"
+                android:exported="false"/>
+        <activity
+                android:name="AndroidBasic.JetPack.PagingWithoutLibrary.PagingActivity"
+                android:exported="false"/>
+        <activity
                 android:name="AndroidAdvanced.RetrofitAndRecycler.RetrofitAndRecyclerActivity"
                 android:exported="false"/>
         <activity

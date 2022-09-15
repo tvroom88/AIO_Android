@@ -1,6 +1,8 @@
 package AndroidExampleModel;
 
 import AndroidBasic.JetPack.DataAndViewBinding.DataAndViewBinding;
+import AndroidBasic.JetPack.PagingWithoutLibrary.PagingActivity;
+import AndroidBasic.JetPack.PagingaWithLibrary.PagingLibraryActivity;
 import AndroidExampleList.Android_Example_Item;
 import java.util.Arrays;
 import java.util.List;
@@ -21,7 +23,9 @@ public class JetPack_Model {
 
     private final List<Android_Example_Item> JecPack_List = Arrays.asList(
             new Android_Example_Item(1, "DataBinding과 ViewBinding", true),
-            new Android_Example_Item(2, "DataBinding과 ViewBinding", true)
+            new Android_Example_Item(2, "Paging without library", true),
+            new Android_Example_Item(3, "Paging with library", true)
+
     );
 
 
@@ -32,7 +36,9 @@ public class JetPack_Model {
     //JetPack class List
     private final List<Class> jetpack_class_list = Arrays.asList(
             DataAndViewBinding.class, //1
-            DataAndViewBinding.class //1
+            PagingActivity.class, //2
+            PagingLibraryActivity.class //3
+
     );
 
     //Getter method for JetPack class List

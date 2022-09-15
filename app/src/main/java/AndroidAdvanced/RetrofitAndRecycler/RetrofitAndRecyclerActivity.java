@@ -38,7 +38,6 @@ public class RetrofitAndRecyclerActivity extends BaseActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
-
         mBinding = RetrofitAndRecyclerBinding.inflate(getLayoutInflater());
         setContentView(mBinding.getRoot());
 
