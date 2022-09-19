@@ -8,9 +8,11 @@
     <!-- 1. 레이아웃뷰와 바인딩할 데이터들 명칭과 클래스지정   -->
     <data>
         <!-- 데이터바인딩으로 연결할 User클래스 객체를 이 레이아웃에서는 user 라는 이름으로 참조하여 사용하겠다는 설정  -->
+        <import type="android.view.View"/>
         <variable
                 name="user"
                 type="AndroidBasic.JetPack.DataAndViewBinding.User"/>
+
 
     </data>
 
@@ -100,6 +102,7 @@
                     android:text="Button"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content" android:id="@+id/binding_button1"/>
+
 
         </LinearLayout>
     </LinearLayout>

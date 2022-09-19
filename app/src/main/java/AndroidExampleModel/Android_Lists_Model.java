@@ -1,5 +1,6 @@
 package AndroidExampleModel;
 
+import AndroidAdvanced.MVVM.MVVM_Example;
 import AndroidAdvanced.RetrofitAndRecycler.RetrofitAndRecyclerActivity;
 import AndroidBasic.AndroidDesign.AndroidDesign_List;
 import AndroidBasic.AndroidFourComponents.Four_Components_List;
@@ -86,11 +87,11 @@ public class Android_Lists_Model {
 
 
 
-
     //---------------------------------------------------------------
     // AndroidAdvanced 리스트
     private final List<Android_Example_Item> android_advanced_code_list = Arrays.asList(
-            new Android_Example_Item(1, "Retrofit + Room + Recycler", false)
+            new Android_Example_Item(1, "Retrofit + Room + Recycler", false),
+            new Android_Example_Item(2, "MVVM example1", false)
     );
 
     public List<Android_Example_Item> getAndroid_advanced_code_list() {
@@ -99,7 +100,9 @@ public class Android_Lists_Model {
 
     // AndroidBasic class 리스트
     private final List<Class> android_advanced_class_list = Arrays.asList(
-            RetrofitAndRecyclerActivity.class //1
+            RetrofitAndRecyclerActivity.class, //1
+            MVVM_Example.class  //2
+
     );
 
     public List<Class> get_Android_Advanced_Class_List() {
