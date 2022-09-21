@@ -45,7 +45,6 @@ public class RetrofitAndRecyclerActivity extends BaseActivity {
 
         picsumDB = PicsumDB.getInstance(this);
 
-
         mRecyclerView = mBinding.recyclerView;
         mRecyclerView.addItemDecoration(new DividerItemDecoration(this, DividerItemDecoration.VERTICAL));
 
